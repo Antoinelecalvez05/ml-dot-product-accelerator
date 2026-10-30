@@ -1,0 +1,25 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 20261029
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/.venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running cocotb_dot_product.arithmetic_and_random_protocol (1/4)
+  5630.00ns INFO     cocotb.regression                  cocotb_dot_product.arithmetic_and_random_protocol passed
+  5630.00ns INFO     cocotb.regression                  running cocotb_dot_product.continuous_valid_back_to_back (2/4)
+  6530.00ns INFO     cocotb.regression                  cocotb_dot_product.continuous_valid_back_to_back passed
+  6530.00ns INFO     cocotb.regression                  running cocotb_dot_product.reset_abort_and_recovery (3/4)
+  8000.00ns INFO     cocotb.regression                  cocotb_dot_product.reset_abort_and_recovery passed
+  8000.00ns INFO     cocotb.regression                  running cocotb_dot_product.measured_cycle_benchmarks (4/4)
+  8850.00ns INFO     cocotb.regression                  cocotb_dot_product.measured_cycle_benchmarks passed
+  8850.00ns INFO     cocotb.regression                  ***********************************************************************************************************
+                                                        ** TEST                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************
+                                                        ** cocotb_dot_product.arithmetic_and_random_protocol   PASS        5630.00           0.04     160071.66  **
+                                                        ** cocotb_dot_product.continuous_valid_back_to_back    PASS         900.00           0.01     154007.33  **
+                                                        ** cocotb_dot_product.reset_abort_and_recovery         PASS        1470.00           0.01     162604.22  **
+                                                        ** cocotb_dot_product.measured_cycle_benchmarks        PASS         850.00           0.01     158289.68  **
+                                                        ***********************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                    8850.00           0.06     151845.74  **
+                                                        ***********************************************************************************************************

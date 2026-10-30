@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="20261029" />
+    <testcase name="arithmetic_and_random_protocol" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="229" time="0.061799049377441406" sim_time_ns="8490.0" ratio_time="137380.75400070986" />
+    <testcase name="continuous_valid_back_to_back" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="257" time="0.009515523910522461" sim_time_ns="1660.0" ratio_time="174451.77119089974" />
+    <testcase name="reset_abort_and_recovery" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="285" time="0.014809846878051758" sim_time_ns="2370.0" ratio_time="160028.66332887937" />
+    <testcase name="measured_cycle_benchmarks" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="365" time="0.012565135955810547" sim_time_ns="1370.0" ratio_time="109031.84850669804" />
+  </testsuite>
+</testsuites>

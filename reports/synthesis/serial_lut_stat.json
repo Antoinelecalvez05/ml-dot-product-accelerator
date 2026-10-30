@@ -1,0 +1,55 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json -tech xilinx ",
+   "modules": {
+      "\\dot_product_serial": {
+         "num_wires":         276,
+         "num_wire_bits":     868,
+         "num_pub_wires":     27,
+         "num_pub_wire_bits": 188,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         418,
+         "num_cells_by_type": {
+            "CARRY4": 7,
+            "FDRE": 56,
+            "INV": 2,
+            "LUT2": 45,
+            "LUT3": 24,
+            "LUT4": 26,
+            "LUT5": 53,
+            "LUT6": 128,
+            "MUXF7": 47,
+            "MUXF8": 14,
+            "RAM32M": 16
+         },
+         "estimated_num_lc": 231
+      }
+   },
+      "design": {
+         "num_wires":         276,
+         "num_wire_bits":     868,
+         "num_pub_wires":     27,
+         "num_pub_wire_bits": 188,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         418,
+         "num_cells_by_type": {
+            "CARRY4": 7,
+            "FDRE": 56,
+            "INV": 2,
+            "LUT2": 45,
+            "LUT3": 24,
+            "LUT4": 26,
+            "LUT5": 53,
+            "LUT6": 128,
+            "MUXF7": 47,
+            "MUXF8": 14,
+            "RAM32M": 16
+         },
+         "estimated_num_lc": 231
+      }
+}
+

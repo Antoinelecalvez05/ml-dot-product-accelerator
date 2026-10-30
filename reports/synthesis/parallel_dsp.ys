@@ -1,0 +1,7 @@
+read_verilog -sv "/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v" "/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_serial.v" "/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_parallel.v"
+hierarchy -check -top dot_product_parallel
+synth_xilinx -top dot_product_parallel -family xc7 -flatten -noiopad -noclkbuf
+check -assert
+tee -o parallel_dsp_stat.json stat -json -tech xilinx
+write_json "/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/build/synthesis/parallel_dsp.json"
+write_verilog -noattr "/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/build/synthesis/parallel_dsp.v"

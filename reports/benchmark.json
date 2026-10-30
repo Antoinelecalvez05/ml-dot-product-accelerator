@@ -1,0 +1,264 @@
+{
+  "status": "passed",
+  "seed": 20261029,
+  "vector_len": 16,
+  "data_width": 8,
+  "definitions": {
+    "edge": "Rising edges numbered from 1 within each test, including reset edges.",
+    "result_visible_edge": "Edge after which out_valid first becomes 1 (postedge observation).",
+    "result_transfer_edge": "Following eligible edge with pre-edge out_valid=1 and out_ready=1.",
+    "inclusive": "Both endpoint edges count: last minus first plus one.",
+    "compute_to_valid_cycles": "Result visible edge minus last accepted input edge; includes reduction.",
+    "repeat_frame_interval_cycles": "Distance between first accepted input edges of consecutive frames."
+  },
+  "simulation_clock_period_ns": 10,
+  "frequency_caveat": "A 10 ns simulation clock is not a timing-closure or Fmax measurement.",
+  "architectures": {
+    "serial": {
+      "lanes": 1,
+      "no_stall": {
+        "first_input_edge": 3,
+        "last_input_edge": 18,
+        "result_visible_edge": 35,
+        "result_transfer_edge": 36,
+        "load_cycles_inclusive": 16,
+        "compute_to_valid_cycles": 17,
+        "first_to_valid_cycles_inclusive": 33,
+        "first_to_transfer_cycles_inclusive": 34,
+        "result": 272,
+        "repeat_frame_interval_cycles": 34,
+        "input_pause_cycles_per_frame": 0,
+        "output_stall_cycles_per_frame": 0,
+        "repetitions": [
+          {
+            "first_input_edge": 3,
+            "last_input_edge": 18,
+            "result_visible_edge": 35,
+            "result_transfer_edge": 36,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 33,
+            "first_to_transfer_cycles_inclusive": 34,
+            "result": 272
+          },
+          {
+            "first_input_edge": 37,
+            "last_input_edge": 52,
+            "result_visible_edge": 69,
+            "result_transfer_edge": 70,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 33,
+            "first_to_transfer_cycles_inclusive": 34,
+            "result": 272
+          },
+          {
+            "first_input_edge": 71,
+            "last_input_edge": 86,
+            "result_visible_edge": 103,
+            "result_transfer_edge": 104,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 33,
+            "first_to_transfer_cycles_inclusive": 34,
+            "result": 272
+          },
+          {
+            "first_input_edge": 105,
+            "last_input_edge": 120,
+            "result_visible_edge": 137,
+            "result_transfer_edge": 138,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 33,
+            "first_to_transfer_cycles_inclusive": 34,
+            "result": 272
+          }
+        ]
+      },
+      "deterministic_stalls": {
+        "first_input_edge": 139,
+        "last_input_edge": 169,
+        "result_visible_edge": 186,
+        "result_transfer_edge": 193,
+        "load_cycles_inclusive": 31,
+        "compute_to_valid_cycles": 17,
+        "first_to_valid_cycles_inclusive": 48,
+        "first_to_transfer_cycles_inclusive": 55,
+        "result": 272,
+        "repeat_frame_interval_cycles": 55,
+        "input_pause_cycles_per_frame": 15,
+        "output_stall_cycles_per_frame": 6,
+        "repetitions": [
+          {
+            "first_input_edge": 139,
+            "last_input_edge": 169,
+            "result_visible_edge": 186,
+            "result_transfer_edge": 193,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 48,
+            "first_to_transfer_cycles_inclusive": 55,
+            "result": 272
+          },
+          {
+            "first_input_edge": 194,
+            "last_input_edge": 224,
+            "result_visible_edge": 241,
+            "result_transfer_edge": 248,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 48,
+            "first_to_transfer_cycles_inclusive": 55,
+            "result": 272
+          },
+          {
+            "first_input_edge": 249,
+            "last_input_edge": 279,
+            "result_visible_edge": 296,
+            "result_transfer_edge": 303,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 48,
+            "first_to_transfer_cycles_inclusive": 55,
+            "result": 272
+          },
+          {
+            "first_input_edge": 304,
+            "last_input_edge": 334,
+            "result_visible_edge": 351,
+            "result_transfer_edge": 358,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 17,
+            "first_to_valid_cycles_inclusive": 48,
+            "first_to_transfer_cycles_inclusive": 55,
+            "result": 272
+          }
+        ]
+      }
+    },
+    "parallel": {
+      "lanes": 4,
+      "no_stall": {
+        "first_input_edge": 3,
+        "last_input_edge": 18,
+        "result_visible_edge": 23,
+        "result_transfer_edge": 24,
+        "load_cycles_inclusive": 16,
+        "compute_to_valid_cycles": 5,
+        "first_to_valid_cycles_inclusive": 21,
+        "first_to_transfer_cycles_inclusive": 22,
+        "result": 272,
+        "repeat_frame_interval_cycles": 22,
+        "input_pause_cycles_per_frame": 0,
+        "output_stall_cycles_per_frame": 0,
+        "repetitions": [
+          {
+            "first_input_edge": 3,
+            "last_input_edge": 18,
+            "result_visible_edge": 23,
+            "result_transfer_edge": 24,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 21,
+            "first_to_transfer_cycles_inclusive": 22,
+            "result": 272
+          },
+          {
+            "first_input_edge": 25,
+            "last_input_edge": 40,
+            "result_visible_edge": 45,
+            "result_transfer_edge": 46,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 21,
+            "first_to_transfer_cycles_inclusive": 22,
+            "result": 272
+          },
+          {
+            "first_input_edge": 47,
+            "last_input_edge": 62,
+            "result_visible_edge": 67,
+            "result_transfer_edge": 68,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 21,
+            "first_to_transfer_cycles_inclusive": 22,
+            "result": 272
+          },
+          {
+            "first_input_edge": 69,
+            "last_input_edge": 84,
+            "result_visible_edge": 89,
+            "result_transfer_edge": 90,
+            "load_cycles_inclusive": 16,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 21,
+            "first_to_transfer_cycles_inclusive": 22,
+            "result": 272
+          }
+        ]
+      },
+      "deterministic_stalls": {
+        "first_input_edge": 91,
+        "last_input_edge": 121,
+        "result_visible_edge": 126,
+        "result_transfer_edge": 133,
+        "load_cycles_inclusive": 31,
+        "compute_to_valid_cycles": 5,
+        "first_to_valid_cycles_inclusive": 36,
+        "first_to_transfer_cycles_inclusive": 43,
+        "result": 272,
+        "repeat_frame_interval_cycles": 43,
+        "input_pause_cycles_per_frame": 15,
+        "output_stall_cycles_per_frame": 6,
+        "repetitions": [
+          {
+            "first_input_edge": 91,
+            "last_input_edge": 121,
+            "result_visible_edge": 126,
+            "result_transfer_edge": 133,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 36,
+            "first_to_transfer_cycles_inclusive": 43,
+            "result": 272
+          },
+          {
+            "first_input_edge": 134,
+            "last_input_edge": 164,
+            "result_visible_edge": 169,
+            "result_transfer_edge": 176,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 36,
+            "first_to_transfer_cycles_inclusive": 43,
+            "result": 272
+          },
+          {
+            "first_input_edge": 177,
+            "last_input_edge": 207,
+            "result_visible_edge": 212,
+            "result_transfer_edge": 219,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 36,
+            "first_to_transfer_cycles_inclusive": 43,
+            "result": 272
+          },
+          {
+            "first_input_edge": 220,
+            "last_input_edge": 250,
+            "result_visible_edge": 255,
+            "result_transfer_edge": 262,
+            "load_cycles_inclusive": 31,
+            "compute_to_valid_cycles": 5,
+            "first_to_valid_cycles_inclusive": 36,
+            "first_to_transfer_cycles_inclusive": 43,
+            "result": 272
+          }
+        ]
+      }
+    }
+  }
+}

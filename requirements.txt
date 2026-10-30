@@ -1,0 +1,2 @@
+# Tested simulation interface. Icarus Verilog is a separate system dependency.
+cocotb==2.0.1

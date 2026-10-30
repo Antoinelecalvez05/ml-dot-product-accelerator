@@ -1,0 +1,3227 @@
+{
+  "status": "passed",
+  "generated_utc": "2026-10-29T22:37:48.430511+00:00",
+  "seed": 20261029,
+  "quick": false,
+  "tools": {
+    "python": "3.12.14",
+    "cocotb": "2.0.1",
+    "iverilog": "Icarus Verilog version 12.0 (stable) ()"
+  },
+  "python_reference_tests": 7,
+  "simulation_tests": 40,
+  "checked_outputs": 1732,
+  "source_sha256": {
+    "rtl/dot_product_core.v": "5c000170036c0889016292f494339ace12b83f6523250feff9cc8c0083191f95",
+    "rtl/dot_product_parallel.v": "32a603351fd67c08aef5d914dc08d89b6d681dd0731b3a59223a45968ffc7cee",
+    "rtl/dot_product_serial.v": "dc8d5d973aef74d6c7fed6a86e8484ad57da32ed679fc56313720ce1d2f78533",
+    "scripts/run_tests.py": "179bc8e21c7b23e1274dc1fa88c0b1fe4dba43448c04982786a3e36783eb9e10",
+    "tests/cocotb_dot_product.py": "665d35aeed119b665482d6f5ba6c107b972db906ffd8d921c3ddb3a6fb60a5a5",
+    "tests/test_reference.py": "a69474321a58c3b0a37ec50793306a9719b7450b9f43d60e801adf8488d2567d",
+    "model/reference.py": "e914cac15c21bce44bc7dcf50a0384e48558bfb3516d767c68d051ab1d4f175f",
+    "requirements.txt": "b700a034c341ad8b29fae7df012c881161e1dc2e221111d4d0e79295e6780a7b"
+  },
+  "configurations": [
+    {
+      "name": "serial",
+      "top": "dot_product_serial",
+      "vector_len": 16,
+      "data_width": 8,
+      "lanes": 1,
+      "random_frames": 512,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 26396,
+            "input_pairs": 8608,
+            "complete_input_frames": 538,
+            "checked_outputs": 538,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 5279,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 2448
+          },
+          "random_frames": 512,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 16
+            },
+            {
+              "case": "all_max",
+              "expected": 258064
+            },
+            {
+              "case": "min_times_min",
+              "expected": 262144
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -260096
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -260096
+            },
+            {
+              "case": "minus_ones",
+              "expected": -16
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 259
+            },
+            {
+              "case": "ramp",
+              "expected": 272
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            },
+            {
+              "case": "impulse_1",
+              "expected": -14986
+            },
+            {
+              "case": "impulse_2",
+              "expected": -14097
+            },
+            {
+              "case": "impulse_3",
+              "expected": -13208
+            },
+            {
+              "case": "impulse_4",
+              "expected": -12319
+            },
+            {
+              "case": "impulse_5",
+              "expected": -11430
+            },
+            {
+              "case": "impulse_6",
+              "expected": -10541
+            },
+            {
+              "case": "impulse_7",
+              "expected": -9652
+            },
+            {
+              "case": "impulse_8",
+              "expected": -8763
+            },
+            {
+              "case": "impulse_9",
+              "expected": -7874
+            },
+            {
+              "case": "impulse_10",
+              "expected": -6985
+            },
+            {
+              "case": "impulse_11",
+              "expected": -6096
+            },
+            {
+              "case": "impulse_12",
+              "expected": -5207
+            },
+            {
+              "case": "impulse_13",
+              "expected": -4318
+            },
+            {
+              "case": "impulse_14",
+              "expected": -3429
+            },
+            {
+              "case": "impulse_15",
+              "expected": -2540
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 488,
+            "input_pairs": 192,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 250,
+            "output_backpressure_cycles": 57
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 379,
+            "input_pairs": 128,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 60,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 18,
+              "result_visible_edge": 35,
+              "result_transfer_edge": 36,
+              "load_cycles_inclusive": 16,
+              "compute_to_valid_cycles": 17,
+              "first_to_valid_cycles_inclusive": 33,
+              "first_to_transfer_cycles_inclusive": 34,
+              "result": 272,
+              "repeat_frame_interval_cycles": 34,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 18,
+                  "result_visible_edge": 35,
+                  "result_transfer_edge": 36,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 33,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 37,
+                  "last_input_edge": 52,
+                  "result_visible_edge": 69,
+                  "result_transfer_edge": 70,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 33,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 71,
+                  "last_input_edge": 86,
+                  "result_visible_edge": 103,
+                  "result_transfer_edge": 104,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 33,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 105,
+                  "last_input_edge": 120,
+                  "result_visible_edge": 137,
+                  "result_transfer_edge": 138,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 33,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 272
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 139,
+              "last_input_edge": 169,
+              "result_visible_edge": 186,
+              "result_transfer_edge": 193,
+              "load_cycles_inclusive": 31,
+              "compute_to_valid_cycles": 17,
+              "first_to_valid_cycles_inclusive": 48,
+              "first_to_transfer_cycles_inclusive": 55,
+              "result": 272,
+              "repeat_frame_interval_cycles": 55,
+              "input_pause_cycles_per_frame": 15,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 139,
+                  "last_input_edge": 169,
+                  "result_visible_edge": 186,
+                  "result_transfer_edge": 193,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 48,
+                  "first_to_transfer_cycles_inclusive": 55,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 194,
+                  "last_input_edge": 224,
+                  "result_visible_edge": 241,
+                  "result_transfer_edge": 248,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 48,
+                  "first_to_transfer_cycles_inclusive": 55,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 249,
+                  "last_input_edge": 279,
+                  "result_visible_edge": 296,
+                  "result_transfer_edge": 303,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 48,
+                  "first_to_transfer_cycles_inclusive": 55,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 304,
+                  "last_input_edge": 334,
+                  "result_visible_edge": 351,
+                  "result_transfer_edge": 358,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 17,
+                  "first_to_valid_cycles_inclusive": 48,
+                  "first_to_transfer_cycles_inclusive": 55,
+                  "result": 272
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 637,
+            "input_pairs": 231,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 27900,
+        "input_pairs": 9159,
+        "complete_input_frames": 571,
+        "checked_outputs": 566,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 5339,
+        "input_backpressure_cycles": 250,
+        "output_backpressure_cycles": 2539
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/serial/compile.log",
+        "simulation.log": "reports/rtl_logs/serial/simulation.log",
+        "results.xml": "reports/rtl_logs/serial/results.xml"
+      }
+    },
+    {
+      "name": "parallel",
+      "top": "dot_product_parallel",
+      "vector_len": 16,
+      "data_width": 8,
+      "lanes": 4,
+      "random_frames": 512,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 19940,
+            "input_pairs": 8608,
+            "complete_input_frames": 538,
+            "checked_outputs": 538,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 5279,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 2448
+          },
+          "random_frames": 512,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 16
+            },
+            {
+              "case": "all_max",
+              "expected": 258064
+            },
+            {
+              "case": "min_times_min",
+              "expected": 262144
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -260096
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -260096
+            },
+            {
+              "case": "minus_ones",
+              "expected": -16
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 259
+            },
+            {
+              "case": "ramp",
+              "expected": 272
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            },
+            {
+              "case": "impulse_1",
+              "expected": -14986
+            },
+            {
+              "case": "impulse_2",
+              "expected": -14097
+            },
+            {
+              "case": "impulse_3",
+              "expected": -13208
+            },
+            {
+              "case": "impulse_4",
+              "expected": -12319
+            },
+            {
+              "case": "impulse_5",
+              "expected": -11430
+            },
+            {
+              "case": "impulse_6",
+              "expected": -10541
+            },
+            {
+              "case": "impulse_7",
+              "expected": -9652
+            },
+            {
+              "case": "impulse_8",
+              "expected": -8763
+            },
+            {
+              "case": "impulse_9",
+              "expected": -7874
+            },
+            {
+              "case": "impulse_10",
+              "expected": -6985
+            },
+            {
+              "case": "impulse_11",
+              "expected": -6096
+            },
+            {
+              "case": "impulse_12",
+              "expected": -5207
+            },
+            {
+              "case": "impulse_13",
+              "expected": -4318
+            },
+            {
+              "case": "impulse_14",
+              "expected": -3429
+            },
+            {
+              "case": "impulse_15",
+              "expected": -2540
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 332,
+            "input_pairs": 192,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 107,
+            "output_backpressure_cycles": 45
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 283,
+            "input_pairs": 128,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 60,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 18,
+              "result_visible_edge": 23,
+              "result_transfer_edge": 24,
+              "load_cycles_inclusive": 16,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 21,
+              "first_to_transfer_cycles_inclusive": 22,
+              "result": 272,
+              "repeat_frame_interval_cycles": 22,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 18,
+                  "result_visible_edge": 23,
+                  "result_transfer_edge": 24,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 21,
+                  "first_to_transfer_cycles_inclusive": 22,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 25,
+                  "last_input_edge": 40,
+                  "result_visible_edge": 45,
+                  "result_transfer_edge": 46,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 21,
+                  "first_to_transfer_cycles_inclusive": 22,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 47,
+                  "last_input_edge": 62,
+                  "result_visible_edge": 67,
+                  "result_transfer_edge": 68,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 21,
+                  "first_to_transfer_cycles_inclusive": 22,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 69,
+                  "last_input_edge": 84,
+                  "result_visible_edge": 89,
+                  "result_transfer_edge": 90,
+                  "load_cycles_inclusive": 16,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 21,
+                  "first_to_transfer_cycles_inclusive": 22,
+                  "result": 272
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 91,
+              "last_input_edge": 121,
+              "result_visible_edge": 126,
+              "result_transfer_edge": 133,
+              "load_cycles_inclusive": 31,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 36,
+              "first_to_transfer_cycles_inclusive": 43,
+              "result": 272,
+              "repeat_frame_interval_cycles": 43,
+              "input_pause_cycles_per_frame": 15,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 91,
+                  "last_input_edge": 121,
+                  "result_visible_edge": 126,
+                  "result_transfer_edge": 133,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 36,
+                  "first_to_transfer_cycles_inclusive": 43,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 134,
+                  "last_input_edge": 164,
+                  "result_visible_edge": 169,
+                  "result_transfer_edge": 176,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 36,
+                  "first_to_transfer_cycles_inclusive": 43,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 177,
+                  "last_input_edge": 207,
+                  "result_visible_edge": 212,
+                  "result_transfer_edge": 219,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 36,
+                  "first_to_transfer_cycles_inclusive": 43,
+                  "result": 272
+                },
+                {
+                  "first_input_edge": 220,
+                  "last_input_edge": 250,
+                  "result_visible_edge": 255,
+                  "result_transfer_edge": 262,
+                  "load_cycles_inclusive": 31,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 36,
+                  "first_to_transfer_cycles_inclusive": 43,
+                  "result": 272
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 16,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 487,
+            "input_pairs": 231,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 21042,
+        "input_pairs": 9159,
+        "complete_input_frames": 571,
+        "checked_outputs": 566,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 5339,
+        "input_backpressure_cycles": 107,
+        "output_backpressure_cycles": 2527
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/parallel/compile.log",
+        "simulation.log": "reports/rtl_logs/parallel/simulation.log",
+        "results.xml": "reports/rtl_logs/parallel/results.xml"
+      }
+    },
+    {
+      "name": "core_n1_w8_l1",
+      "top": "dot_product_core",
+      "vector_len": 1,
+      "data_width": 8,
+      "lanes": 1,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 1,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 450,
+            "input_pairs": 43,
+            "complete_input_frames": 43,
+            "checked_outputs": 43,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 208
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 1
+            },
+            {
+              "case": "all_max",
+              "expected": 16129
+            },
+            {
+              "case": "min_times_min",
+              "expected": 16384
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -16256
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -16256
+            },
+            {
+              "case": "minus_ones",
+              "expected": -1
+            },
+            {
+              "case": "alternating",
+              "expected": 16256
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 16129
+            },
+            {
+              "case": "ramp",
+              "expected": 0
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 1,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 83,
+            "input_pairs": 12,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 55,
+            "output_backpressure_cycles": 27
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 1,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 64,
+            "input_pairs": 8,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 3,
+              "result_visible_edge": 5,
+              "result_transfer_edge": 6,
+              "load_cycles_inclusive": 1,
+              "compute_to_valid_cycles": 2,
+              "first_to_valid_cycles_inclusive": 3,
+              "first_to_transfer_cycles_inclusive": 4,
+              "result": 0,
+              "repeat_frame_interval_cycles": 4,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 3,
+                  "result_visible_edge": 5,
+                  "result_transfer_edge": 6,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 4,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 7,
+                  "last_input_edge": 7,
+                  "result_visible_edge": 9,
+                  "result_transfer_edge": 10,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 4,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 11,
+                  "last_input_edge": 11,
+                  "result_visible_edge": 13,
+                  "result_transfer_edge": 14,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 4,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 15,
+                  "last_input_edge": 15,
+                  "result_visible_edge": 17,
+                  "result_transfer_edge": 18,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 4,
+                  "result": 0
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 19,
+              "last_input_edge": 19,
+              "result_visible_edge": 21,
+              "result_transfer_edge": 28,
+              "load_cycles_inclusive": 1,
+              "compute_to_valid_cycles": 2,
+              "first_to_valid_cycles_inclusive": 3,
+              "first_to_transfer_cycles_inclusive": 10,
+              "result": 0,
+              "repeat_frame_interval_cycles": 10,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 19,
+                  "last_input_edge": 19,
+                  "result_visible_edge": 21,
+                  "result_transfer_edge": 28,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 29,
+                  "last_input_edge": 29,
+                  "result_visible_edge": 31,
+                  "result_transfer_edge": 38,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 39,
+                  "last_input_edge": 39,
+                  "result_visible_edge": 41,
+                  "result_transfer_edge": 48,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 49,
+                  "last_input_edge": 49,
+                  "result_visible_edge": 51,
+                  "result_transfer_edge": 58,
+                  "load_cycles_inclusive": 1,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 3,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 1,
+          "data_width": 8,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 100,
+            "input_pairs": 12,
+            "complete_input_frames": 12,
+            "checked_outputs": 7,
+            "reset_edges": 10,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 697,
+        "input_pairs": 75,
+        "complete_input_frames": 75,
+        "checked_outputs": 70,
+        "reset_edges": 16,
+        "aborted_partial_frames": 0,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 0,
+        "input_backpressure_cycles": 55,
+        "output_backpressure_cycles": 269
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n1_w8_l1/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n1_w8_l1/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n1_w8_l1/results.xml"
+      }
+    },
+    {
+      "name": "core_n2_w2_l1",
+      "top": "dot_product_core",
+      "vector_len": 2,
+      "data_width": 2,
+      "lanes": 1,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 2,
+          "data_width": 2,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 563,
+            "input_pairs": 88,
+            "complete_input_frames": 44,
+            "checked_outputs": 44,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 62,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 205
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 2
+            },
+            {
+              "case": "all_max",
+              "expected": 2
+            },
+            {
+              "case": "min_times_min",
+              "expected": 8
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -4
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -4
+            },
+            {
+              "case": "minus_ones",
+              "expected": -2
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 5
+            },
+            {
+              "case": "ramp",
+              "expected": -1
+            },
+            {
+              "case": "impulse_0",
+              "expected": 1
+            },
+            {
+              "case": "impulse_1",
+              "expected": 0
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 2,
+          "data_width": 2,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 90,
+            "input_pairs": 24,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 53,
+            "output_backpressure_cycles": 9
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 2,
+          "data_width": 2,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 85,
+            "input_pairs": 16,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 4,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 4,
+              "result_visible_edge": 7,
+              "result_transfer_edge": 8,
+              "load_cycles_inclusive": 2,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 5,
+              "first_to_transfer_cycles_inclusive": 6,
+              "result": -1,
+              "repeat_frame_interval_cycles": 6,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 4,
+                  "result_visible_edge": 7,
+                  "result_transfer_edge": 8,
+                  "load_cycles_inclusive": 2,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 5,
+                  "first_to_transfer_cycles_inclusive": 6,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 9,
+                  "last_input_edge": 10,
+                  "result_visible_edge": 13,
+                  "result_transfer_edge": 14,
+                  "load_cycles_inclusive": 2,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 5,
+                  "first_to_transfer_cycles_inclusive": 6,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 15,
+                  "last_input_edge": 16,
+                  "result_visible_edge": 19,
+                  "result_transfer_edge": 20,
+                  "load_cycles_inclusive": 2,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 5,
+                  "first_to_transfer_cycles_inclusive": 6,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 21,
+                  "last_input_edge": 22,
+                  "result_visible_edge": 25,
+                  "result_transfer_edge": 26,
+                  "load_cycles_inclusive": 2,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 5,
+                  "first_to_transfer_cycles_inclusive": 6,
+                  "result": -1
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 27,
+              "last_input_edge": 29,
+              "result_visible_edge": 32,
+              "result_transfer_edge": 39,
+              "load_cycles_inclusive": 3,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 6,
+              "first_to_transfer_cycles_inclusive": 13,
+              "result": -1,
+              "repeat_frame_interval_cycles": 13,
+              "input_pause_cycles_per_frame": 1,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 27,
+                  "last_input_edge": 29,
+                  "result_visible_edge": 32,
+                  "result_transfer_edge": 39,
+                  "load_cycles_inclusive": 3,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 13,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 40,
+                  "last_input_edge": 42,
+                  "result_visible_edge": 45,
+                  "result_transfer_edge": 52,
+                  "load_cycles_inclusive": 3,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 13,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 53,
+                  "last_input_edge": 55,
+                  "result_visible_edge": 58,
+                  "result_transfer_edge": 65,
+                  "load_cycles_inclusive": 3,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 13,
+                  "result": -1
+                },
+                {
+                  "first_input_edge": 66,
+                  "last_input_edge": 68,
+                  "result_visible_edge": 71,
+                  "result_transfer_edge": 78,
+                  "load_cycles_inclusive": 3,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 13,
+                  "result": -1
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 2,
+          "data_width": 2,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 147,
+            "input_pairs": 28,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 885,
+        "input_pairs": 156,
+        "complete_input_frames": 77,
+        "checked_outputs": 72,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 66,
+        "input_backpressure_cycles": 53,
+        "output_backpressure_cycles": 248
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n2_w2_l1/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n2_w2_l1/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n2_w2_l1/results.xml"
+      }
+    },
+    {
+      "name": "core_n4_w4_l1",
+      "top": "dot_product_core",
+      "vector_len": 4,
+      "data_width": 4,
+      "lanes": 1,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 802,
+            "input_pairs": 184,
+            "complete_input_frames": 46,
+            "checked_outputs": 46,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 91,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 214
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 4
+            },
+            {
+              "case": "all_max",
+              "expected": 196
+            },
+            {
+              "case": "min_times_min",
+              "expected": 256
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -224
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -224
+            },
+            {
+              "case": "minus_ones",
+              "expected": -4
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 1
+            },
+            {
+              "case": "ramp",
+              "expected": 0
+            },
+            {
+              "case": "impulse_0",
+              "expected": -35
+            },
+            {
+              "case": "impulse_1",
+              "expected": 14
+            },
+            {
+              "case": "impulse_2",
+              "expected": -49
+            },
+            {
+              "case": "impulse_3",
+              "expected": 0
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 164,
+            "input_pairs": 48,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 96,
+            "output_backpressure_cycles": 33
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 127,
+            "input_pairs": 32,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 12,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 6,
+              "result_visible_edge": 11,
+              "result_transfer_edge": 12,
+              "load_cycles_inclusive": 4,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 9,
+              "first_to_transfer_cycles_inclusive": 10,
+              "result": 0,
+              "repeat_frame_interval_cycles": 10,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 6,
+                  "result_visible_edge": 11,
+                  "result_transfer_edge": 12,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 13,
+                  "last_input_edge": 16,
+                  "result_visible_edge": 21,
+                  "result_transfer_edge": 22,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 23,
+                  "last_input_edge": 26,
+                  "result_visible_edge": 31,
+                  "result_transfer_edge": 32,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 33,
+                  "last_input_edge": 36,
+                  "result_visible_edge": 41,
+                  "result_transfer_edge": 42,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 0
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 43,
+              "last_input_edge": 49,
+              "result_visible_edge": 54,
+              "result_transfer_edge": 61,
+              "load_cycles_inclusive": 7,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 12,
+              "first_to_transfer_cycles_inclusive": 19,
+              "result": 0,
+              "repeat_frame_interval_cycles": 19,
+              "input_pause_cycles_per_frame": 3,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 43,
+                  "last_input_edge": 49,
+                  "result_visible_edge": 54,
+                  "result_transfer_edge": 61,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 12,
+                  "first_to_transfer_cycles_inclusive": 19,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 62,
+                  "last_input_edge": 68,
+                  "result_visible_edge": 73,
+                  "result_transfer_edge": 80,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 12,
+                  "first_to_transfer_cycles_inclusive": 19,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 81,
+                  "last_input_edge": 87,
+                  "result_visible_edge": 92,
+                  "result_transfer_edge": 99,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 12,
+                  "first_to_transfer_cycles_inclusive": 19,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 100,
+                  "last_input_edge": 106,
+                  "result_visible_edge": 111,
+                  "result_transfer_edge": 118,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 12,
+                  "first_to_transfer_cycles_inclusive": 19,
+                  "result": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 1,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 217,
+            "input_pairs": 57,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 1310,
+        "input_pairs": 321,
+        "complete_input_frames": 79,
+        "checked_outputs": 74,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 103,
+        "input_backpressure_cycles": 96,
+        "output_backpressure_cycles": 281
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n4_w4_l1/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n4_w4_l1/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n4_w4_l1/results.xml"
+      }
+    },
+    {
+      "name": "core_n4_w4_l2",
+      "top": "dot_product_core",
+      "vector_len": 4,
+      "data_width": 4,
+      "lanes": 2,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 710,
+            "input_pairs": 184,
+            "complete_input_frames": 46,
+            "checked_outputs": 46,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 91,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 214
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 4
+            },
+            {
+              "case": "all_max",
+              "expected": 196
+            },
+            {
+              "case": "min_times_min",
+              "expected": 256
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -224
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -224
+            },
+            {
+              "case": "minus_ones",
+              "expected": -4
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 1
+            },
+            {
+              "case": "ramp",
+              "expected": 0
+            },
+            {
+              "case": "impulse_0",
+              "expected": -35
+            },
+            {
+              "case": "impulse_1",
+              "expected": 14
+            },
+            {
+              "case": "impulse_2",
+              "expected": -49
+            },
+            {
+              "case": "impulse_3",
+              "expected": 0
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 164,
+            "input_pairs": 48,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 96,
+            "output_backpressure_cycles": 57
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 111,
+            "input_pairs": 32,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 12,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 6,
+              "result_visible_edge": 9,
+              "result_transfer_edge": 10,
+              "load_cycles_inclusive": 4,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 7,
+              "first_to_transfer_cycles_inclusive": 8,
+              "result": 0,
+              "repeat_frame_interval_cycles": 8,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 6,
+                  "result_visible_edge": 9,
+                  "result_transfer_edge": 10,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 7,
+                  "first_to_transfer_cycles_inclusive": 8,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 11,
+                  "last_input_edge": 14,
+                  "result_visible_edge": 17,
+                  "result_transfer_edge": 18,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 7,
+                  "first_to_transfer_cycles_inclusive": 8,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 19,
+                  "last_input_edge": 22,
+                  "result_visible_edge": 25,
+                  "result_transfer_edge": 26,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 7,
+                  "first_to_transfer_cycles_inclusive": 8,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 27,
+                  "last_input_edge": 30,
+                  "result_visible_edge": 33,
+                  "result_transfer_edge": 34,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 7,
+                  "first_to_transfer_cycles_inclusive": 8,
+                  "result": 0
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 35,
+              "last_input_edge": 41,
+              "result_visible_edge": 44,
+              "result_transfer_edge": 51,
+              "load_cycles_inclusive": 7,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 10,
+              "first_to_transfer_cycles_inclusive": 17,
+              "result": 0,
+              "repeat_frame_interval_cycles": 17,
+              "input_pause_cycles_per_frame": 3,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 35,
+                  "last_input_edge": 41,
+                  "result_visible_edge": 44,
+                  "result_transfer_edge": 51,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 10,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 52,
+                  "last_input_edge": 58,
+                  "result_visible_edge": 61,
+                  "result_transfer_edge": 68,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 10,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 69,
+                  "last_input_edge": 75,
+                  "result_visible_edge": 78,
+                  "result_transfer_edge": 85,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 10,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 86,
+                  "last_input_edge": 92,
+                  "result_visible_edge": 95,
+                  "result_transfer_edge": 102,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 10,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 192,
+            "input_pairs": 57,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 1177,
+        "input_pairs": 321,
+        "complete_input_frames": 79,
+        "checked_outputs": 74,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 103,
+        "input_backpressure_cycles": 96,
+        "output_backpressure_cycles": 305
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n4_w4_l2/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n4_w4_l2/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n4_w4_l2/results.xml"
+      }
+    },
+    {
+      "name": "core_n4_w4_l4",
+      "top": "dot_product_core",
+      "vector_len": 4,
+      "data_width": 4,
+      "lanes": 4,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 664,
+            "input_pairs": 184,
+            "complete_input_frames": 46,
+            "checked_outputs": 46,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 91,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 214
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 4
+            },
+            {
+              "case": "all_max",
+              "expected": 196
+            },
+            {
+              "case": "min_times_min",
+              "expected": 256
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -224
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -224
+            },
+            {
+              "case": "minus_ones",
+              "expected": -4
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 1
+            },
+            {
+              "case": "ramp",
+              "expected": 0
+            },
+            {
+              "case": "impulse_0",
+              "expected": -35
+            },
+            {
+              "case": "impulse_1",
+              "expected": 14
+            },
+            {
+              "case": "impulse_2",
+              "expected": -49
+            },
+            {
+              "case": "impulse_3",
+              "expected": 0
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 113,
+            "input_pairs": 48,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 51,
+            "output_backpressure_cycles": 18
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 103,
+            "input_pairs": 32,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 12,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 6,
+              "result_visible_edge": 8,
+              "result_transfer_edge": 9,
+              "load_cycles_inclusive": 4,
+              "compute_to_valid_cycles": 2,
+              "first_to_valid_cycles_inclusive": 6,
+              "first_to_transfer_cycles_inclusive": 7,
+              "result": 0,
+              "repeat_frame_interval_cycles": 7,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 6,
+                  "result_visible_edge": 8,
+                  "result_transfer_edge": 9,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 7,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 10,
+                  "last_input_edge": 13,
+                  "result_visible_edge": 15,
+                  "result_transfer_edge": 16,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 7,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 17,
+                  "last_input_edge": 20,
+                  "result_visible_edge": 22,
+                  "result_transfer_edge": 23,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 7,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 24,
+                  "last_input_edge": 27,
+                  "result_visible_edge": 29,
+                  "result_transfer_edge": 30,
+                  "load_cycles_inclusive": 4,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 6,
+                  "first_to_transfer_cycles_inclusive": 7,
+                  "result": 0
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 31,
+              "last_input_edge": 37,
+              "result_visible_edge": 39,
+              "result_transfer_edge": 46,
+              "load_cycles_inclusive": 7,
+              "compute_to_valid_cycles": 2,
+              "first_to_valid_cycles_inclusive": 9,
+              "first_to_transfer_cycles_inclusive": 16,
+              "result": 0,
+              "repeat_frame_interval_cycles": 16,
+              "input_pause_cycles_per_frame": 3,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 31,
+                  "last_input_edge": 37,
+                  "result_visible_edge": 39,
+                  "result_transfer_edge": 46,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 16,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 47,
+                  "last_input_edge": 53,
+                  "result_visible_edge": 55,
+                  "result_transfer_edge": 62,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 16,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 63,
+                  "last_input_edge": 69,
+                  "result_visible_edge": 71,
+                  "result_transfer_edge": 78,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 16,
+                  "result": 0
+                },
+                {
+                  "first_input_edge": 79,
+                  "last_input_edge": 85,
+                  "result_visible_edge": 87,
+                  "result_transfer_edge": 94,
+                  "load_cycles_inclusive": 7,
+                  "compute_to_valid_cycles": 2,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 16,
+                  "result": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 4,
+          "data_width": 4,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 179,
+            "input_pairs": 57,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 1059,
+        "input_pairs": 321,
+        "complete_input_frames": 79,
+        "checked_outputs": 74,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 103,
+        "input_backpressure_cycles": 51,
+        "output_backpressure_cycles": 266
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n4_w4_l4/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n4_w4_l4/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n4_w4_l4/results.xml"
+      }
+    },
+    {
+      "name": "core_n6_w8_l3",
+      "top": "dot_product_core",
+      "vector_len": 6,
+      "data_width": 8,
+      "lanes": 3,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 6,
+          "data_width": 8,
+          "lanes": 3,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 849,
+            "input_pairs": 288,
+            "complete_input_frames": 48,
+            "checked_outputs": 48,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 117,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 218
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 6
+            },
+            {
+              "case": "all_max",
+              "expected": 96774
+            },
+            {
+              "case": "min_times_min",
+              "expected": 98304
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -97536
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -97536
+            },
+            {
+              "case": "minus_ones",
+              "expected": -6
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 129
+            },
+            {
+              "case": "ramp",
+              "expected": 7
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            },
+            {
+              "case": "impulse_1",
+              "expected": -14986
+            },
+            {
+              "case": "impulse_2",
+              "expected": -14097
+            },
+            {
+              "case": "impulse_3",
+              "expected": -13208
+            },
+            {
+              "case": "impulse_4",
+              "expected": -12319
+            },
+            {
+              "case": "impulse_5",
+              "expected": -11430
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 6,
+          "data_width": 8,
+          "lanes": 3,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 166,
+            "input_pairs": 72,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 74,
+            "output_backpressure_cycles": 33
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 6,
+          "data_width": 8,
+          "lanes": 3,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 137,
+            "input_pairs": 48,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 20,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 8,
+              "result_visible_edge": 11,
+              "result_transfer_edge": 12,
+              "load_cycles_inclusive": 6,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 9,
+              "first_to_transfer_cycles_inclusive": 10,
+              "result": 7,
+              "repeat_frame_interval_cycles": 10,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 8,
+                  "result_visible_edge": 11,
+                  "result_transfer_edge": 12,
+                  "load_cycles_inclusive": 6,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 13,
+                  "last_input_edge": 18,
+                  "result_visible_edge": 21,
+                  "result_transfer_edge": 22,
+                  "load_cycles_inclusive": 6,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 23,
+                  "last_input_edge": 28,
+                  "result_visible_edge": 31,
+                  "result_transfer_edge": 32,
+                  "load_cycles_inclusive": 6,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 33,
+                  "last_input_edge": 38,
+                  "result_visible_edge": 41,
+                  "result_transfer_edge": 42,
+                  "load_cycles_inclusive": 6,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 9,
+                  "first_to_transfer_cycles_inclusive": 10,
+                  "result": 7
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 43,
+              "last_input_edge": 53,
+              "result_visible_edge": 56,
+              "result_transfer_edge": 63,
+              "load_cycles_inclusive": 11,
+              "compute_to_valid_cycles": 3,
+              "first_to_valid_cycles_inclusive": 14,
+              "first_to_transfer_cycles_inclusive": 21,
+              "result": 7,
+              "repeat_frame_interval_cycles": 21,
+              "input_pause_cycles_per_frame": 5,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 43,
+                  "last_input_edge": 53,
+                  "result_visible_edge": 56,
+                  "result_transfer_edge": 63,
+                  "load_cycles_inclusive": 11,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 14,
+                  "first_to_transfer_cycles_inclusive": 21,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 64,
+                  "last_input_edge": 74,
+                  "result_visible_edge": 77,
+                  "result_transfer_edge": 84,
+                  "load_cycles_inclusive": 11,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 14,
+                  "first_to_transfer_cycles_inclusive": 21,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 85,
+                  "last_input_edge": 95,
+                  "result_visible_edge": 98,
+                  "result_transfer_edge": 105,
+                  "load_cycles_inclusive": 11,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 14,
+                  "first_to_transfer_cycles_inclusive": 21,
+                  "result": 7
+                },
+                {
+                  "first_input_edge": 106,
+                  "last_input_edge": 116,
+                  "result_visible_edge": 119,
+                  "result_transfer_edge": 126,
+                  "load_cycles_inclusive": 11,
+                  "compute_to_valid_cycles": 3,
+                  "first_to_valid_cycles_inclusive": 14,
+                  "first_to_transfer_cycles_inclusive": 21,
+                  "result": 7
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 6,
+          "data_width": 8,
+          "lanes": 3,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 237,
+            "input_pairs": 86,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 1389,
+        "input_pairs": 494,
+        "complete_input_frames": 81,
+        "checked_outputs": 76,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 137,
+        "input_backpressure_cycles": 74,
+        "output_backpressure_cycles": 285
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n6_w8_l3/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n6_w8_l3/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n6_w8_l3/results.xml"
+      }
+    },
+    {
+      "name": "core_n8_w8_l2",
+      "top": "dot_product_core",
+      "vector_len": 8,
+      "data_width": 8,
+      "lanes": 2,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 8,
+          "data_width": 8,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 1138,
+            "input_pairs": 400,
+            "complete_input_frames": 50,
+            "checked_outputs": 50,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 195,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 214
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 8
+            },
+            {
+              "case": "all_max",
+              "expected": 129032
+            },
+            {
+              "case": "min_times_min",
+              "expected": 131072
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -130048
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -130048
+            },
+            {
+              "case": "minus_ones",
+              "expected": -8
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 32642
+            },
+            {
+              "case": "ramp",
+              "expected": 24
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            },
+            {
+              "case": "impulse_1",
+              "expected": -14986
+            },
+            {
+              "case": "impulse_2",
+              "expected": -14097
+            },
+            {
+              "case": "impulse_3",
+              "expected": -13208
+            },
+            {
+              "case": "impulse_4",
+              "expected": -12319
+            },
+            {
+              "case": "impulse_5",
+              "expected": -11430
+            },
+            {
+              "case": "impulse_6",
+              "expected": -10541
+            },
+            {
+              "case": "impulse_7",
+              "expected": -9652
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 8,
+          "data_width": 8,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 188,
+            "input_pairs": 96,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 71,
+            "output_backpressure_cycles": 5
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 8,
+          "data_width": 8,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 179,
+            "input_pairs": 64,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 28,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 10,
+              "result_visible_edge": 15,
+              "result_transfer_edge": 16,
+              "load_cycles_inclusive": 8,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 13,
+              "first_to_transfer_cycles_inclusive": 14,
+              "result": 24,
+              "repeat_frame_interval_cycles": 14,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 10,
+                  "result_visible_edge": 15,
+                  "result_transfer_edge": 16,
+                  "load_cycles_inclusive": 8,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 13,
+                  "first_to_transfer_cycles_inclusive": 14,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 17,
+                  "last_input_edge": 24,
+                  "result_visible_edge": 29,
+                  "result_transfer_edge": 30,
+                  "load_cycles_inclusive": 8,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 13,
+                  "first_to_transfer_cycles_inclusive": 14,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 31,
+                  "last_input_edge": 38,
+                  "result_visible_edge": 43,
+                  "result_transfer_edge": 44,
+                  "load_cycles_inclusive": 8,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 13,
+                  "first_to_transfer_cycles_inclusive": 14,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 45,
+                  "last_input_edge": 52,
+                  "result_visible_edge": 57,
+                  "result_transfer_edge": 58,
+                  "load_cycles_inclusive": 8,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 13,
+                  "first_to_transfer_cycles_inclusive": 14,
+                  "result": 24
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 59,
+              "last_input_edge": 73,
+              "result_visible_edge": 78,
+              "result_transfer_edge": 85,
+              "load_cycles_inclusive": 15,
+              "compute_to_valid_cycles": 5,
+              "first_to_valid_cycles_inclusive": 20,
+              "first_to_transfer_cycles_inclusive": 27,
+              "result": 24,
+              "repeat_frame_interval_cycles": 27,
+              "input_pause_cycles_per_frame": 7,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 59,
+                  "last_input_edge": 73,
+                  "result_visible_edge": 78,
+                  "result_transfer_edge": 85,
+                  "load_cycles_inclusive": 15,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 20,
+                  "first_to_transfer_cycles_inclusive": 27,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 86,
+                  "last_input_edge": 100,
+                  "result_visible_edge": 105,
+                  "result_transfer_edge": 112,
+                  "load_cycles_inclusive": 15,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 20,
+                  "first_to_transfer_cycles_inclusive": 27,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 113,
+                  "last_input_edge": 127,
+                  "result_visible_edge": 132,
+                  "result_transfer_edge": 139,
+                  "load_cycles_inclusive": 15,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 20,
+                  "first_to_transfer_cycles_inclusive": 27,
+                  "result": 24
+                },
+                {
+                  "first_input_edge": 140,
+                  "last_input_edge": 154,
+                  "result_visible_edge": 159,
+                  "result_transfer_edge": 166,
+                  "load_cycles_inclusive": 15,
+                  "compute_to_valid_cycles": 5,
+                  "first_to_valid_cycles_inclusive": 20,
+                  "first_to_transfer_cycles_inclusive": 27,
+                  "result": 24
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 8,
+          "data_width": 8,
+          "lanes": 2,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 307,
+            "input_pairs": 115,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 1812,
+        "input_pairs": 675,
+        "complete_input_frames": 83,
+        "checked_outputs": 78,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 223,
+        "input_backpressure_cycles": 71,
+        "output_backpressure_cycles": 253
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n8_w8_l2/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n8_w8_l2/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n8_w8_l2/results.xml"
+      }
+    },
+    {
+      "name": "core_n12_w8_l4",
+      "top": "dot_product_core",
+      "vector_len": 12,
+      "data_width": 8,
+      "lanes": 4,
+      "random_frames": 32,
+      "status": "passed",
+      "junit": {
+        "tests": 4,
+        "failed": [],
+        "skipped": []
+      },
+      "test_reports": [
+        {
+          "test": "arithmetic_and_random_protocol",
+          "status": "passed",
+          "vector_len": 12,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 1428,
+            "input_pairs": 648,
+            "complete_input_frames": 54,
+            "checked_outputs": 54,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 253,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 221
+          },
+          "random_frames": 32,
+          "directed_cases": [
+            {
+              "case": "zero",
+              "expected": 0
+            },
+            {
+              "case": "ones",
+              "expected": 12
+            },
+            {
+              "case": "all_max",
+              "expected": 193548
+            },
+            {
+              "case": "min_times_min",
+              "expected": 196608
+            },
+            {
+              "case": "minimum_sum",
+              "expected": -195072
+            },
+            {
+              "case": "minimum_sum_swapped",
+              "expected": -195072
+            },
+            {
+              "case": "minus_ones",
+              "expected": -12
+            },
+            {
+              "case": "alternating",
+              "expected": 0
+            },
+            {
+              "case": "mixed_extrema",
+              "expected": 258
+            },
+            {
+              "case": "ramp",
+              "expected": 104
+            },
+            {
+              "case": "impulse_0",
+              "expected": -15875
+            },
+            {
+              "case": "impulse_1",
+              "expected": -14986
+            },
+            {
+              "case": "impulse_2",
+              "expected": -14097
+            },
+            {
+              "case": "impulse_3",
+              "expected": -13208
+            },
+            {
+              "case": "impulse_4",
+              "expected": -12319
+            },
+            {
+              "case": "impulse_5",
+              "expected": -11430
+            },
+            {
+              "case": "impulse_6",
+              "expected": -10541
+            },
+            {
+              "case": "impulse_7",
+              "expected": -9652
+            },
+            {
+              "case": "impulse_8",
+              "expected": -8763
+            },
+            {
+              "case": "impulse_9",
+              "expected": -7874
+            },
+            {
+              "case": "impulse_10",
+              "expected": -6985
+            },
+            {
+              "case": "impulse_11",
+              "expected": -6096
+            }
+          ]
+        },
+        {
+          "test": "continuous_valid_back_to_back",
+          "status": "passed",
+          "vector_len": 12,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 250,
+            "input_pairs": 144,
+            "complete_input_frames": 12,
+            "checked_outputs": 12,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 77,
+            "output_backpressure_cycles": 27
+          },
+          "frames": 12
+        },
+        {
+          "test": "measured_cycle_benchmarks",
+          "status": "passed",
+          "vector_len": 12,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 223,
+            "input_pairs": 96,
+            "complete_input_frames": 8,
+            "checked_outputs": 8,
+            "reset_edges": 2,
+            "aborted_partial_frames": 0,
+            "aborted_complete_frames": 0,
+            "input_pause_cycles": 44,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 24
+          },
+          "clock_period_ns": 10,
+          "note": "The simulation period is stimulus only; it does not prove achievable clock frequency.",
+          "scenarios": {
+            "no_stall": {
+              "first_input_edge": 3,
+              "last_input_edge": 14,
+              "result_visible_edge": 18,
+              "result_transfer_edge": 19,
+              "load_cycles_inclusive": 12,
+              "compute_to_valid_cycles": 4,
+              "first_to_valid_cycles_inclusive": 16,
+              "first_to_transfer_cycles_inclusive": 17,
+              "result": 104,
+              "repeat_frame_interval_cycles": 17,
+              "input_pause_cycles_per_frame": 0,
+              "output_stall_cycles_per_frame": 0,
+              "repetitions": [
+                {
+                  "first_input_edge": 3,
+                  "last_input_edge": 14,
+                  "result_visible_edge": 18,
+                  "result_transfer_edge": 19,
+                  "load_cycles_inclusive": 12,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 16,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 20,
+                  "last_input_edge": 31,
+                  "result_visible_edge": 35,
+                  "result_transfer_edge": 36,
+                  "load_cycles_inclusive": 12,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 16,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 37,
+                  "last_input_edge": 48,
+                  "result_visible_edge": 52,
+                  "result_transfer_edge": 53,
+                  "load_cycles_inclusive": 12,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 16,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 54,
+                  "last_input_edge": 65,
+                  "result_visible_edge": 69,
+                  "result_transfer_edge": 70,
+                  "load_cycles_inclusive": 12,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 16,
+                  "first_to_transfer_cycles_inclusive": 17,
+                  "result": 104
+                }
+              ]
+            },
+            "deterministic_stalls": {
+              "first_input_edge": 71,
+              "last_input_edge": 93,
+              "result_visible_edge": 97,
+              "result_transfer_edge": 104,
+              "load_cycles_inclusive": 23,
+              "compute_to_valid_cycles": 4,
+              "first_to_valid_cycles_inclusive": 27,
+              "first_to_transfer_cycles_inclusive": 34,
+              "result": 104,
+              "repeat_frame_interval_cycles": 34,
+              "input_pause_cycles_per_frame": 11,
+              "output_stall_cycles_per_frame": 6,
+              "repetitions": [
+                {
+                  "first_input_edge": 71,
+                  "last_input_edge": 93,
+                  "result_visible_edge": 97,
+                  "result_transfer_edge": 104,
+                  "load_cycles_inclusive": 23,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 27,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 105,
+                  "last_input_edge": 127,
+                  "result_visible_edge": 131,
+                  "result_transfer_edge": 138,
+                  "load_cycles_inclusive": 23,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 27,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 139,
+                  "last_input_edge": 161,
+                  "result_visible_edge": 165,
+                  "result_transfer_edge": 172,
+                  "load_cycles_inclusive": 23,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 27,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 104
+                },
+                {
+                  "first_input_edge": 173,
+                  "last_input_edge": 195,
+                  "result_visible_edge": 199,
+                  "result_transfer_edge": 206,
+                  "load_cycles_inclusive": 23,
+                  "compute_to_valid_cycles": 4,
+                  "first_to_valid_cycles_inclusive": 27,
+                  "first_to_transfer_cycles_inclusive": 34,
+                  "result": 104
+                }
+              ]
+            }
+          }
+        },
+        {
+          "test": "reset_abort_and_recovery",
+          "status": "passed",
+          "vector_len": 12,
+          "data_width": 8,
+          "lanes": 4,
+          "seed": 20261029,
+          "coverage": {
+            "clock_edges": 384,
+            "input_pairs": 173,
+            "complete_input_frames": 13,
+            "checked_outputs": 8,
+            "reset_edges": 11,
+            "aborted_partial_frames": 2,
+            "aborted_complete_frames": 5,
+            "input_pause_cycles": 0,
+            "input_backpressure_cycles": 0,
+            "output_backpressure_cycles": 10
+          },
+          "scenarios": [
+            "reset_during_partial_load",
+            "reset_on_final_input_edge",
+            "reset_during_compute",
+            "reset_on_final_compute_edge",
+            "reset_on_reduction_edge",
+            "reset_pending_result_ready_0",
+            "reset_pending_result_ready_1",
+            "held_reset_with_valid_and_ready"
+          ]
+        }
+      ],
+      "coverage": {
+        "clock_edges": 2285,
+        "input_pairs": 1061,
+        "complete_input_frames": 87,
+        "checked_outputs": 82,
+        "reset_edges": 17,
+        "aborted_partial_frames": 2,
+        "aborted_complete_frames": 5,
+        "input_pause_cycles": 297,
+        "input_backpressure_cycles": 77,
+        "output_backpressure_cycles": 282
+      },
+      "logs": {
+        "compile.log": "reports/rtl_logs/core_n12_w8_l4/compile.log",
+        "simulation.log": "reports/rtl_logs/core_n12_w8_l4/simulation.log",
+        "results.xml": "reports/rtl_logs/core_n12_w8_l4/results.xml"
+      }
+    }
+  ]
+}

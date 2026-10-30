@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+*.vcd
+*.fst
+*.jou
+*.log.tmp
+.DS_Store
+.pytest_cache/
+
