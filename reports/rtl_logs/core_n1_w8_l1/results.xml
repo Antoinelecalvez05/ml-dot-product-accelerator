@@ -1,9 +1,9 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="20261029" />
-    <testcase name="arithmetic_and_random_protocol" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="229" time="0.02946615219116211" sim_time_ns="4500.0" ratio_time="152717.59851120642" />
-    <testcase name="continuous_valid_back_to_back" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="257" time="0.008834123611450195" sim_time_ns="830.0" ratio_time="93953.85852697487" />
-    <testcase name="reset_abort_and_recovery" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="285" time="0.007726907730102539" sim_time_ns="1000.0" ratio_time="129417.87775000771" />
-    <testcase name="measured_cycle_benchmarks" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="365" time="0.004937171936035156" sim_time_ns="640.0" ratio_time="129628.86613869036" />
+    <testcase name="arithmetic_and_random_protocol" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="218" time="0.06158328056335449" sim_time_ns="4500.0" ratio_time="73071.78115284999" />
+    <testcase name="continuous_valid_back_to_back" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="246" time="0.015431404113769531" sim_time_ns="830.0" ratio_time="53786.42111117978" />
+    <testcase name="reset_abort_and_recovery" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="273" time="0.026161909103393555" sim_time_ns="1000.0" ratio_time="38223.51022044819" />
+    <testcase name="measured_cycle_benchmarks" classname="cocotb_dot_product" file="/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/tests/cocotb_dot_product.py" lineno="349" time="0.00808262825012207" sim_time_ns="640.0" ratio_time="79182.16453791923" />
   </testsuite>
 </testsuites>

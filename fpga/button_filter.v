@@ -1,7 +1,5 @@
 `timescale 1ns/1ps
 
-// Synchronize a mechanical button, then require CYCLES equal samples before
-// changing its level. A held button produces only one one-clock pressed pulse.
 module button_filter #(
     parameter integer CYCLES = 1000000
 ) (

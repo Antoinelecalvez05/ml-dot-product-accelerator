@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "generated_utc": "2026-10-29T22:39:53.734444+00:00",
+  "generated_utc": "2026-11-03T13:22:18.288680+00:00",
   "yosys_version": "Yosys 0.33 (git sha1 2584903a060)",
   "target_family": "Xilinx 7-series (xc7), suitable for Artix-7",
   "parameters": {
@@ -11,11 +11,11 @@
   "measurement": "Mapped synthesis primitive counts, before placement and routing",
   "scope": "Core including input buffers and controller; excludes board IO/clock buffers",
   "rtl_sha256": {
-    "rtl/dot_product_core.v": "5c000170036c0889016292f494339ace12b83f6523250feff9cc8c0083191f95",
-    "rtl/dot_product_serial.v": "dc8d5d973aef74d6c7fed6a86e8484ad57da32ed679fc56313720ce1d2f78533",
-    "rtl/dot_product_parallel.v": "32a603351fd67c08aef5d914dc08d89b6d681dd0731b3a59223a45968ffc7cee"
+    "rtl/dot_product_core.v": "94474cd54973db579cedc3ac66f0f6a9434289b59156b32763965787b3ac21bc",
+    "rtl/dot_product_serial.v": "b3c5309fd120bfe32dd51a38240a1e5b0644c37cd57e85d2a0e860f35c35650f",
+    "rtl/dot_product_parallel.v": "7b9515109aaa0affd2cf4d1fcb9cc2a04d6d936c345bb165609c98ff8d0bf52d"
   },
-  "synthesis_script_sha256": "a4bbc698da33b0c3df5d852a9f03677bddc5b75f91986098ec969b31720028cb",
+  "synthesis_script_sha256": "17f9ebb82c979256f778ec7ea883bd5ffbca3617ebca79c459d30d168251fc65",
   "notes": [
     "LUT is the sum of LUT* primitive instances, not packed slices or total physical LUT sites.",
     "Distributed RAM primitives are listed separately and consume FPGA LUT resources too.",
@@ -52,7 +52,7 @@
       "command_file": "serial_dsp.ys",
       "statistics": "serial_dsp_stat.json",
       "mapped_verilog": "build/synthesis/serial_dsp.v",
-      "simulation_library": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
+      "simulation_library": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
     },
     {
       "design": "parallel",
@@ -82,7 +82,7 @@
       "command_file": "parallel_dsp.ys",
       "statistics": "parallel_dsp_stat.json",
       "mapped_verilog": "build/synthesis/parallel_dsp.v",
-      "simulation_library": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
+      "simulation_library": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
     },
     {
       "design": "serial",
@@ -112,7 +112,7 @@
       "command_file": "serial_lut.ys",
       "statistics": "serial_lut_stat.json",
       "mapped_verilog": "build/synthesis/serial_lut.v",
-      "simulation_library": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
+      "simulation_library": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
     },
     {
       "design": "parallel",
@@ -142,7 +142,7 @@
       "command_file": "parallel_lut.ys",
       "statistics": "parallel_lut_stat.json",
       "mapped_verilog": "build/synthesis/parallel_lut.v",
-      "simulation_library": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
+      "simulation_library": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v"
     }
   ]
 }

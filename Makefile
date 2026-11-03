@@ -41,7 +41,6 @@ board-test:
 report:
 	$(PYTHON) scripts/make_report.py
 
-# Keep dependencies in order even when make is invoked with -j.
 all:
 	$(PYTHON) scripts/run_tests.py
 	$(PYTHON) scripts/synthesize.py

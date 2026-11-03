@@ -1,5 +1,3 @@
-# Run from anywhere: vivado -mode batch -source fpga/build_vivado.tcl
-# This builds a bitstream; it never opens or programs a hardware device.
 set fpga_dir [file dirname [file normalize [info script]]]
 set root [file dirname $fpga_dir]
 set out [file join $root build vivado]
@@ -13,10 +11,6 @@ read_verilog [file join $fpga_dir basys3_demo.v]
 read_xdc [file join $fpga_dir basys3.xdc]
 synth_design -top basys3_demo -part xc7a35tcpg236-1
 
-# Resolve register pins against the synthesized design, not an elaborated RTL
-# view. Fail explicitly if synthesis naming changes, instead of silently losing
-# an intended exception. Only asynchronous input -> first-stage D is excluded;
-# the first-stage Q -> second-stage D paths remain timed.
 set button_first_stages [get_cells -hierarchical -filter {NAME =~ *sync_meta_reg}]
 if {[llength $button_first_stages] != 2} {
     error "Expected two button synchronizer first stages; inspect synthesized register names."
@@ -37,7 +31,6 @@ report_drc -file [file join $out drc.rpt]
 report_exceptions -file [file join $out exceptions.rpt]
 write_checkpoint -force [file join $out basys3_demo_routed.dcp]
 
-# The clock constraint is a target until these routed timing checks pass.
 set setup_paths [get_timing_paths -delay_type max -max_paths 1]
 if {[llength $setup_paths] == 0} { error "No setup timing paths found; inspect timing constraints." }
 if {[get_property SLACK $setup_paths] < 0} { error "100 MHz setup timing failed; inspect build/vivado/timing.rpt." }

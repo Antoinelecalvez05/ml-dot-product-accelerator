@@ -1,8 +1,6 @@
 `timescale 1ns / 1ps
 `default_nettype none
 
-// Sequential architecture: one multiply-accumulate lane is reused VECTOR_LEN
-// times. With the defaults, compute takes 16 clocks plus one reduction clock.
 module dot_product_serial #(
     parameter integer VECTOR_LEN = 16,
     parameter integer DATA_WIDTH = 8,

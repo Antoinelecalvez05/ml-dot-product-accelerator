@@ -1,8 +1,5 @@
 `timescale 1ns/1ps
 
-// Basys 3 demonstration: press centre to evaluate the same known vector with
-// both engines. The stream is a[i] = i-8, b[i] = i+1, i=0..15; dot = 272.
-// This wrapper is FPGA-specific: initialization supplies a power-on reset.
 module basys3_demo #(
     parameter integer DEBOUNCE_CYCLES = 1000000
 ) (
@@ -82,8 +79,6 @@ module basys3_demo #(
             saved_parallel <= 0;
         end else if (running) begin
             if (feeding) begin
-                // Per-consumer acceptance flags prevent duplicate samples if
-                // the two engines ever assert ready on different clocks.
                 if (serial_valid && serial_ready)
                     serial_sent <= 1'b1;
                 if (parallel_valid && parallel_ready)

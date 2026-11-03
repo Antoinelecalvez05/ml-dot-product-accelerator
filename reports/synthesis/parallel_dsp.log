@@ -28,7 +28,7 @@
 Parsing SystemVerilog input from `/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v' to AST representation.
 Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
 Generating RTLIL representation for module `\dot_product_core'.
-Warning: Replacing memory \lane_accumulator with list of registers. See /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:111
+Warning: Replacing memory \lane_accumulator with list of registers. See /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:90
 Successfully finished Verilog frontend.
 
 2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_serial.v
@@ -57,7 +57,7 @@ Parameter \DATA_WIDTH = 8
 Parameter \LANES = 4
 Parameter \ACC_WIDTH = 20
 Generating RTLIL representation for module `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core'.
-Warning: Replacing memory \lane_accumulator with list of registers. See /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:111
+Warning: Replacing memory \lane_accumulator with list of registers. See /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:90
 
 4.3. Analyzing design hierarchy..
 Top module:  \dot_product_parallel
@@ -72,8 +72,8 @@ Removed 2 unused modules.
 
 5. Executing SYNTH_XILINX pass.
 
-5.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v' to AST representation.
+5.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v' to AST representation.
 Generating RTLIL representation for module `\VCC'.
 Generating RTLIL representation for module `\GND'.
 Generating RTLIL representation for module `\IBUF'.
@@ -175,8 +175,8 @@ Generating RTLIL representation for module `\RAMB18E1'.
 Generating RTLIL representation for module `\RAMB36E1'.
 Successfully finished Verilog frontend.
 
-5.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_xtra.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_xtra.v' to AST representation.
+5.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_xtra.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_xtra.v' to AST representation.
 Generating RTLIL representation for module `\RAMB4_S1'.
 Generating RTLIL representation for module `\RAMB4_S2'.
 Generating RTLIL representation for module `\RAMB4_S4'.
@@ -524,22 +524,22 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 5.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225 in module RAM64M.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053 in module RAM32M.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983 in module RAM128X1D.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935 in module RAM64X1D.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908 in module RAM32X1D_1.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869 in module RAM32X1D.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732 in module FDPE_1.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729 in module FDPE.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714 in module FDCE_1.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711 in module FDCE.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696 in module FDSE_1.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692 in module FDSE.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674 in module FDRE_1.
-Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670 in module FDRE.
-Removed 1 dead cases from process $proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60 in module $paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.
-Marked 5 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60 in module $paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225 in module RAM64M.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053 in module RAM32M.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983 in module RAM128X1D.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935 in module RAM64X1D.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908 in module RAM32X1D_1.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869 in module RAM32X1D.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732 in module FDPE_1.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729 in module FDPE.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714 in module FDCE_1.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711 in module FDCE.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696 in module FDSE_1.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692 in module FDSE.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674 in module FDRE_1.
+Marked 1 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670 in module FDRE.
+Removed 1 dead cases from process $proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60 in module $paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.
+Marked 5 switch rules as full_case in process $proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60 in module $paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.
 Removed a total of 1 dead cases.
 
 5.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -547,195 +547,195 @@ Removed 0 redundant assignments.
 Promoted 109 assignments to connections.
 
 5.4.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
+Found init rule in `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
   Set init value: \r = 0
-Found init rule in `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
+Found init rule in `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
+Found init rule in `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
+Found init rule in `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
+Found init rule in `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
+Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
   Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
+Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
   Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
+Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
   Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
+Found init rule in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
   Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
+Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
   Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
+Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
   Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
+Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
   Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
+Found init rule in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
   Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
+Found init rule in `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
   Set init value: \mem = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
+Found init rule in `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
   Set init value: \mem = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
+Found init rule in `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
   Set init value: \mem = 0
-Found init rule in `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
+Found init rule in `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
   Set init value: \mem = 0
-Found init rule in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
+Found init rule in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
   Set init value: \Q = 1'1
-Found init rule in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
+Found init rule in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
   Set init value: \Q = 1'1
-Found init rule in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
+Found init rule in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
   Set init value: \Q = 1'0
-Found init rule in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
+Found init rule in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
   Set init value: \Q = 1'0
-Found init rule in `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
+Found init rule in `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
   Set init value: \Q = 1'1
-Found init rule in `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
+Found init rule in `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
   Set init value: \Q = 1'1
-Found init rule in `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
+Found init rule in `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
   Set init value: \Q = 1'0
-Found init rule in `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
+Found init rule in `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
   Set init value: \Q = 1'0
 
 5.4.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \PRE in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
-Found async reset \PRE in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
-Found async reset \CLR in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
-Found async reset \CLR in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
+Found async reset \PRE in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
+Found async reset \PRE in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
+Found async reset \CLR in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
+Found async reset \CLR in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
 
 5.4.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~27 debug messages>
 
 5.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
-Creating decoders for process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
+Creating decoders for process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
+Creating decoders for process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
      1/1: $0\r[31:0]
-Creating decoders for process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
-Creating decoders for process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
+Creating decoders for process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
+Creating decoders for process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
      1/1: $0\r[15:0]
-Creating decoders for process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
-Creating decoders for process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
-Creating decoders for process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
-Creating decoders for process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
+Creating decoders for process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
+Creating decoders for process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
+Creating decoders for process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
+Creating decoders for process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
      1/1: $0\r[15:0]
-Creating decoders for process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
-Creating decoders for process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
-Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
-Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
-Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
-Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
-Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating decoders for process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
+Creating decoders for process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
+Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
+Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
+Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
+Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
+Creating decoders for process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
      1/16: $1$lookahead\mem_d$1224[63:0]$1257
-     2/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1214[63:0]$1252
-     3/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1213[63:0]$1251
-     4/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1215[5:0]$1253
+     2/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1214[63:0]$1252
+     3/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1213[63:0]$1251
+     4/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1215[5:0]$1253
      5/16: $1$lookahead\mem_c$1223[63:0]$1256
-     6/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1211[63:0]$1249
-     7/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1210[63:0]$1248
-     8/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1212[5:0]$1250
+     6/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1211[63:0]$1249
+     7/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1210[63:0]$1248
+     8/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1212[5:0]$1250
      9/16: $1$lookahead\mem_b$1222[63:0]$1255
-    10/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1208[63:0]$1246
-    11/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1207[63:0]$1245
-    12/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1209[5:0]$1247
+    10/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1208[63:0]$1246
+    11/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1207[63:0]$1245
+    12/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1209[5:0]$1247
     13/16: $1$lookahead\mem_a$1221[63:0]$1254
-    14/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1205[63:0]$1243
-    15/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1204[63:0]$1242
-    16/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1206[5:0]$1244
-Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
-Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
-Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
-Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
-Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+    14/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1205[63:0]$1243
+    15/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1204[63:0]$1242
+    16/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1206[5:0]$1244
+Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
+Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
+Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
+Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
+Creating decoders for process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
      1/16: $1$lookahead\mem_d$1052[63:0]$1085
-     2/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1034[63:0]$1080
-     3/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1033[63:0]$1079
-     4/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1035[31:0]$1081
+     2/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1034[63:0]$1080
+     3/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1033[63:0]$1079
+     4/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1035[31:0]$1081
      5/16: $1$lookahead\mem_c$1051[63:0]$1084
-     6/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1031[63:0]$1077
-     7/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1030[63:0]$1076
-     8/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1032[31:0]$1078
+     6/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1031[63:0]$1077
+     7/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1030[63:0]$1076
+     8/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1032[31:0]$1078
      9/16: $1$lookahead\mem_b$1050[63:0]$1083
-    10/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1028[63:0]$1074
-    11/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1027[63:0]$1073
-    12/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1029[31:0]$1075
+    10/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1028[63:0]$1074
+    11/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1027[63:0]$1073
+    12/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1029[31:0]$1075
     13/16: $1$lookahead\mem_a$1049[63:0]$1082
-    14/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1025[63:0]$1071
-    15/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1024[63:0]$1070
-    16/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1026[31:0]$1072
-Creating decoders for process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
-Creating decoders for process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+    14/16: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1025[63:0]$1071
+    15/16: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1024[63:0]$1070
+    16/16: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1026[31:0]$1072
+Creating decoders for process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
+Creating decoders for process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
      1/4: $1$lookahead\mem$982[127:0]$991
-     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$977[127:0]$989
-     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$976[127:0]$988
-     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$978[6:0]$990
-Creating decoders for process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
-Creating decoders for process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$977[127:0]$989
+     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$976[127:0]$988
+     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$978[6:0]$990
+Creating decoders for process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
+Creating decoders for process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
      1/4: $1$lookahead\mem$934[63:0]$943
-     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$929[63:0]$941
-     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$928[63:0]$940
-     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$930[5:0]$942
-Creating decoders for process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
-Creating decoders for process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$929[63:0]$941
+     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$928[63:0]$940
+     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$930[5:0]$942
+Creating decoders for process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
+Creating decoders for process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
      1/4: $1$lookahead\mem$907[31:0]$916
-     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$902[31:0]$914
-     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$901[31:0]$913
-     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$903[4:0]$915
-Creating decoders for process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
-Creating decoders for process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$902[31:0]$914
+     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$901[31:0]$913
+     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$903[4:0]$915
+Creating decoders for process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
+Creating decoders for process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
      1/4: $1$lookahead\mem$868[31:0]$877
-     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$863[31:0]$875
-     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$862[31:0]$874
-     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$864[4:0]$876
-Creating decoders for process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
-Creating decoders for process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
+     2/4: $1$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$863[31:0]$875
+     3/4: $1$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$862[31:0]$874
+     4/4: $1$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$864[4:0]$876
+Creating decoders for process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
+Creating decoders for process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
-Creating decoders for process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
+Creating decoders for process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
+Creating decoders for process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
-Creating decoders for process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
+Creating decoders for process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
+Creating decoders for process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
-Creating decoders for process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
+Creating decoders for process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
+Creating decoders for process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
-Creating decoders for process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
+Creating decoders for process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
+Creating decoders for process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
-Creating decoders for process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
+Creating decoders for process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
+Creating decoders for process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
-Creating decoders for process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
+Creating decoders for process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
+Creating decoders for process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
-Creating decoders for process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
+Creating decoders for process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
+Creating decoders for process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
      1/1: $0\Q[0:0]
 Creating decoders for process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:0$119'.
-Creating decoders for process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating decoders for process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
      1/30: $4\accumulator_index[31:0]
      2/30: $3\accumulator_index[31:0]
-     3/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_EN[7:0]$85
-     4/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_DATA[7:0]$84
-     5/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_ADDR[3:0]$83
-     6/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82
-     7/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_DATA[7:0]$81
-     8/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_ADDR[3:0]$80
-     9/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_EN[7:0]$78
-    10/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_DATA[7:0]$77
-    11/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_ADDR[3:0]$76
-    12/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75
-    13/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_DATA[7:0]$74
-    14/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_ADDR[3:0]$73
+     3/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_EN[7:0]$85
+     4/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_DATA[7:0]$84
+     5/30: $3$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_ADDR[3:0]$83
+     6/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82
+     7/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_DATA[7:0]$81
+     8/30: $3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_ADDR[3:0]$80
+     9/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_EN[7:0]$78
+    10/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_DATA[7:0]$77
+    11/30: $2$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_ADDR[3:0]$76
+    12/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75
+    13/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_DATA[7:0]$74
+    14/30: $2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_ADDR[3:0]$73
     15/30: $2\accumulator_index[31:0]
     16/30: $1\accumulator_index[31:0]
-    17/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_EN[7:0]$72
-    18/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_DATA[7:0]$71
-    19/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_ADDR[3:0]$70
-    20/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$69
-    21/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_DATA[7:0]$68
-    22/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_ADDR[3:0]$67
+    17/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_EN[7:0]$72
+    18/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_DATA[7:0]$71
+    19/30: $1$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_ADDR[3:0]$70
+    20/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$69
+    21/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_DATA[7:0]$68
+    22/30: $1$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_ADDR[3:0]$67
     23/30: $0\lane_accumulator[3][19:0]
     24/30: $0\lane_accumulator[2][19:0]
     25/30: $0\lane_accumulator[1][19:0]
@@ -763,250 +763,250 @@ No latch inferred for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\
 No latch inferred for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\reduction_tree[6]' from process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:0$119'.
 
 5.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\SRLC32E.\r' using process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
+Creating register for signal `\SRLC32E.\r' using process `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
   created $dff cell `$procdff$1941' with positive edge clock.
-Creating register for signal `\SRLC16E.\r' using process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
+Creating register for signal `\SRLC16E.\r' using process `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
   created $dff cell `$procdff$1942' with positive edge clock.
-Creating register for signal `\SRLC16.\r' using process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
+Creating register for signal `\SRLC16.\r' using process `\SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
   created $dff cell `$procdff$1943' with positive edge clock.
-Creating register for signal `\SRL16E.\r' using process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
+Creating register for signal `\SRL16E.\r' using process `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
   created $dff cell `$procdff$1944' with positive edge clock.
-Creating register for signal `\SRL16.\r' using process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
+Creating register for signal `\SRL16.\r' using process `\SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
   created $dff cell `$procdff$1945' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_a' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.\mem_a' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1946' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_b' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.\mem_b' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1947' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_c' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.\mem_c' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1948' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_d' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.\mem_d' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1949' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1204' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1204' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1950' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1205' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1205' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1951' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1206' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1988$1206' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1952' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1207' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1207' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1953' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1208' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1208' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1954' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1209' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1989$1209' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1955' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1210' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1210' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1956' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1211' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1211' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1957' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1212' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1990$1212' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1958' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1213' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1213' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1959' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1214' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1214' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1960' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1215' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1991$1215' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1961' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_a$1221' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$lookahead\mem_a$1221' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1962' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_b$1222' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$lookahead\mem_b$1222' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1963' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_c$1223' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$lookahead\mem_c$1223' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1964' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_d$1224' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Creating register for signal `\RAM64M.$lookahead\mem_d$1224' using process `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
   created $dff cell `$procdff$1965' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_a' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.\mem_a' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1966' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_b' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.\mem_b' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1967' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_c' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.\mem_c' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1968' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_d' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.\mem_d' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1969' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1024' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1024' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1970' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1025' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1025' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1971' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1026' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1814$1026' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1972' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1027' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1027' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1973' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1028' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1028' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1974' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1029' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1815$1029' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1975' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1030' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1030' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1976' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1031' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1031' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1977' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1032' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1816$1032' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1978' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1033' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1033' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1979' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1034' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1034' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1980' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1035' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1817$1035' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1981' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_a$1049' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$lookahead\mem_a$1049' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1982' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_b$1050' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$lookahead\mem_b$1050' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1983' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_c$1051' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$lookahead\mem_c$1051' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1984' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_d$1052' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Creating register for signal `\RAM32M.$lookahead\mem_d$1052' using process `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
   created $dff cell `$procdff$1985' with positive edge clock.
-Creating register for signal `\RAM128X1D.\mem' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Creating register for signal `\RAM128X1D.\mem' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
   created $dff cell `$procdff$1986' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$976' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Creating register for signal `\RAM128X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$976' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
   created $dff cell `$procdff$1987' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$977' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Creating register for signal `\RAM128X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$977' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
   created $dff cell `$procdff$1988' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$978' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Creating register for signal `\RAM128X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$978' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
   created $dff cell `$procdff$1989' with positive edge clock.
-Creating register for signal `\RAM128X1D.$lookahead\mem$982' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Creating register for signal `\RAM128X1D.$lookahead\mem$982' using process `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
   created $dff cell `$procdff$1990' with positive edge clock.
-Creating register for signal `\RAM64X1D.\mem' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Creating register for signal `\RAM64X1D.\mem' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
   created $dff cell `$procdff$1991' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$928' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Creating register for signal `\RAM64X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$928' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
   created $dff cell `$procdff$1992' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$929' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Creating register for signal `\RAM64X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$929' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
   created $dff cell `$procdff$1993' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$930' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Creating register for signal `\RAM64X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$930' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
   created $dff cell `$procdff$1994' with positive edge clock.
-Creating register for signal `\RAM64X1D.$lookahead\mem$934' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Creating register for signal `\RAM64X1D.$lookahead\mem$934' using process `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
   created $dff cell `$procdff$1995' with positive edge clock.
-Creating register for signal `\RAM32X1D_1.\mem' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Creating register for signal `\RAM32X1D_1.\mem' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
   created $dff cell `$procdff$1996' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$901' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$901' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
   created $dff cell `$procdff$1997' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$902' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$902' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
   created $dff cell `$procdff$1998' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$903' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$903' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
   created $dff cell `$procdff$1999' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$lookahead\mem$907' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Creating register for signal `\RAM32X1D_1.$lookahead\mem$907' using process `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
   created $dff cell `$procdff$2000' with negative edge clock.
-Creating register for signal `\RAM32X1D.\mem' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Creating register for signal `\RAM32X1D.\mem' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
   created $dff cell `$procdff$2001' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$862' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Creating register for signal `\RAM32X1D.$bitselwrite$mask$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$862' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
   created $dff cell `$procdff$2002' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$863' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Creating register for signal `\RAM32X1D.$bitselwrite$data$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$863' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
   created $dff cell `$procdff$2003' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$864' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Creating register for signal `\RAM32X1D.$bitselwrite$sel$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$864' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
   created $dff cell `$procdff$2004' with positive edge clock.
-Creating register for signal `\RAM32X1D.$lookahead\mem$868' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Creating register for signal `\RAM32X1D.$lookahead\mem$868' using process `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
   created $dff cell `$procdff$2005' with positive edge clock.
-Creating register for signal `\FDPE_1.\Q' using process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
+Creating register for signal `\FDPE_1.\Q' using process `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
   created $adff cell `$procdff$2006' with negative edge clock and positive level reset.
-Creating register for signal `\FDPE.\Q' using process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
+Creating register for signal `\FDPE.\Q' using process `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
   created $adff cell `$procdff$2007' with positive edge clock and positive level reset.
-Creating register for signal `\FDCE_1.\Q' using process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
+Creating register for signal `\FDCE_1.\Q' using process `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
   created $adff cell `$procdff$2008' with negative edge clock and positive level reset.
-Creating register for signal `\FDCE.\Q' using process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
+Creating register for signal `\FDCE.\Q' using process `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
   created $adff cell `$procdff$2009' with positive edge clock and positive level reset.
-Creating register for signal `\FDSE_1.\Q' using process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
+Creating register for signal `\FDSE_1.\Q' using process `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
   created $dff cell `$procdff$2010' with negative edge clock.
-Creating register for signal `\FDSE.\Q' using process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
+Creating register for signal `\FDSE.\Q' using process `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
   created $dff cell `$procdff$2011' with positive edge clock.
-Creating register for signal `\FDRE_1.\Q' using process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
+Creating register for signal `\FDRE_1.\Q' using process `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
   created $dff cell `$procdff$2012' with negative edge clock.
-Creating register for signal `\FDRE.\Q' using process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
+Creating register for signal `\FDRE.\Q' using process `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
   created $dff cell `$procdff$2013' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\result' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\result' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2014' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\state' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\state' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2015' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\write_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\write_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2016' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\group_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\group_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2017' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\accumulator_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\accumulator_index' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2018' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[0]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[0]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2019' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[1]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[1]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2020' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[2]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[2]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2021' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[3]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.\lane_accumulator[3]' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2022' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_ADDR' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_ADDR' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2023' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_DATA' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_DATA' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2024' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2025' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_ADDR' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_ADDR' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2026' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_DATA' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_DATA' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2027' with positive edge clock.
-Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:118$53_EN' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Creating register for signal `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$memwr$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:97$53_EN' using process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
   created $dff cell `$procdff$2028' with positive edge clock.
 
 5.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
-Found and cleaned up 1 empty switch in `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
-Removing empty process `SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
-Removing empty process `SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
-Found and cleaned up 1 empty switch in `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
-Removing empty process `SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
-Removing empty process `SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
-Removing empty process `SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
-Removing empty process `SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
-Found and cleaned up 1 empty switch in `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
-Removing empty process `SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
-Removing empty process `SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
-Removing empty process `SRL16.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
-Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
-Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
-Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
-Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
-Found and cleaned up 1 empty switch in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
-Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
-Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
-Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
-Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
-Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
-Found and cleaned up 1 empty switch in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
-Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
-Removing empty process `RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
-Found and cleaned up 1 empty switch in `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
-Removing empty process `RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
-Removing empty process `RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
-Found and cleaned up 1 empty switch in `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
-Removing empty process `RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
-Removing empty process `RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
-Found and cleaned up 1 empty switch in `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
-Removing empty process `RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
-Removing empty process `RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
-Found and cleaned up 1 empty switch in `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
-Removing empty process `RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
-Removing empty process `FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
-Found and cleaned up 1 empty switch in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
-Removing empty process `FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
-Removing empty process `FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
-Found and cleaned up 1 empty switch in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
-Removing empty process `FDPE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
-Removing empty process `FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
-Found and cleaned up 1 empty switch in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
-Removing empty process `FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
-Removing empty process `FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
-Found and cleaned up 1 empty switch in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
-Removing empty process `FDCE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
-Removing empty process `FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
-Found and cleaned up 2 empty switches in `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
-Removing empty process `FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
-Removing empty process `FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
-Found and cleaned up 2 empty switches in `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
-Removing empty process `FDSE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
-Removing empty process `FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
-Found and cleaned up 2 empty switches in `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
-Removing empty process `FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
-Removing empty process `FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
-Found and cleaned up 2 empty switches in `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
-Removing empty process `FDRE.$proc$/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
+Removing empty process `SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2405$1430'.
+Found and cleaned up 1 empty switch in `\SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
+Removing empty process `SRLC32E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2413$1429'.
+Removing empty process `SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2361$1423'.
+Found and cleaned up 1 empty switch in `\SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
+Removing empty process `SRLC16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2369$1422'.
+Removing empty process `SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2329$1416'.
+Removing empty process `SRLC16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2332$1415'.
+Removing empty process `SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2292$1413'.
+Found and cleaned up 1 empty switch in `\SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
+Removing empty process `SRL16E.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2299$1412'.
+Removing empty process `SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2264$1406'.
+Removing empty process `SRL16.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:2266$1405'.
+Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1980$1331'.
+Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1979$1330'.
+Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1978$1329'.
+Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1977$1328'.
+Found and cleaned up 1 empty switch in `\RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Removing empty process `RAM64M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1986$1225'.
+Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1806$1179'.
+Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1805$1178'.
+Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1804$1177'.
+Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1803$1176'.
+Found and cleaned up 1 empty switch in `\RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Removing empty process `RAM32M.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1812$1053'.
+Removing empty process `RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1712$1020'.
+Found and cleaned up 1 empty switch in `\RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Removing empty process `RAM128X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1716$983'.
+Removing empty process `RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1607$972'.
+Found and cleaned up 1 empty switch in `\RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Removing empty process `RAM64X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1611$935'.
+Removing empty process `RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1561$927'.
+Found and cleaned up 1 empty switch in `\RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Removing empty process `RAM32X1D_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1565$908'.
+Removing empty process `RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1502$900'.
+Found and cleaned up 1 empty switch in `\RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Removing empty process `RAM32X1D.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:1506$869'.
+Removing empty process `FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$735'.
+Found and cleaned up 1 empty switch in `\FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
+Removing empty process `FDPE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:815$732'.
+Removing empty process `FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$731'.
+Found and cleaned up 1 empty switch in `\FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
+Removing empty process `FDPE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:774$729'.
+Removing empty process `FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$717'.
+Found and cleaned up 1 empty switch in `\FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
+Removing empty process `FDCE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:736$714'.
+Removing empty process `FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$713'.
+Found and cleaned up 1 empty switch in `\FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
+Removing empty process `FDCE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:695$711'.
+Removing empty process `FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$699'.
+Found and cleaned up 2 empty switches in `\FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
+Removing empty process `FDSE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:592$696'.
+Removing empty process `FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$695'.
+Found and cleaned up 2 empty switches in `\FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
+Removing empty process `FDSE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:559$692'.
+Removing empty process `FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$677'.
+Found and cleaned up 2 empty switches in `\FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
+Removing empty process `FDRE_1.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:527$674'.
+Removing empty process `FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:0$673'.
+Found and cleaned up 2 empty switches in `\FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
+Removing empty process `FDRE.$proc$/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_sim.v:494$670'.
 Removing empty process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:0$119'.
-Found and cleaned up 6 empty switches in `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
-Removing empty process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:101$60'.
+Found and cleaned up 6 empty switches in `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
+Removing empty process `$paramod$ba4e29eb47057098c5e1eae9d29429fe70fd9085\dot_product_core.$proc$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:82$60'.
 Cleaned up 27 empty switches.
 
 5.4.12. Executing OPT_EXPR pass (perform const folding).
@@ -1073,8 +1073,8 @@ Removed 18 multiplexer ports.
 
 5.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \dot_product_parallel.
-    New ctrl vector for $pmux cell $flatten\core.$procmux$1752: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y $auto$opt_reduce.cc:134:opt_pmux$2032 }
-    New ctrl vector for $pmux cell $flatten\core.$procmux$1776: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y $auto$opt_reduce.cc:134:opt_pmux$2034 }
+    New ctrl vector for $pmux cell $flatten\core.$procmux$1752: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y $auto$opt_reduce.cc:134:opt_pmux$2032 }
+    New ctrl vector for $pmux cell $flatten\core.$procmux$1776: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y $auto$opt_reduce.cc:134:opt_pmux$2034 }
   Optimizing cells in module \dot_product_parallel.
 Performed a total of 2 changes.
 
@@ -1132,24 +1132,24 @@ Extracting FSM `\core.state' from module `\dot_product_parallel'.
   root of input selection tree: $flatten\core.$0\state[1:0]
   found reset state: 2'00 (guessed from mux tree)
   found ctrl input: \rst
-  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:63$57_Y
+  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:51$57_Y
   found ctrl input: $flatten\core.$procmux$1754_CMP
   found ctrl input: $flatten\core.$procmux$1755_CMP
-  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y
-  found ctrl input: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:156$94_Y
+  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y
+  found ctrl input: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:132$94_Y
   found state code: 2'00
   found state code: 2'11
-  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:140$92_Y
+  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$92_Y
   found state code: 2'10
-  found ctrl input: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$79_Y
-  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$86_Y
+  found ctrl input: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$79_Y
+  found ctrl input: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:98$86_Y
   found state code: 2'01
   found ctrl output: $flatten\core.$procmux$1755_CMP
   found ctrl output: $flatten\core.$procmux$1754_CMP
-  found ctrl output: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:63$57_Y
-  found ctrl output: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y
-  ctrl inputs: { $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$79_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$86_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:140$92_Y $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:156$94_Y \rst }
-  ctrl outputs: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:63$57_Y $flatten\core.$0\state[1:0] $flatten\core.$procmux$1754_CMP $flatten\core.$procmux$1755_CMP }
+  found ctrl output: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:51$57_Y
+  found ctrl output: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y
+  ctrl inputs: { $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$79_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:98$86_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$92_Y $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:132$94_Y \rst }
+  ctrl outputs: { $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:51$57_Y $flatten\core.$0\state[1:0] $flatten\core.$procmux$1754_CMP $flatten\core.$procmux$1755_CMP }
   transition:       2'00 5'0---0 ->       2'00 6'100000
   transition:       2'00 5'10--0 ->       2'00 6'100000
   transition:       2'00 5'11--0 ->       2'01 6'100100
@@ -1197,16 +1197,16 @@ FSM `$fsm$\core.state$2035' from module `dot_product_parallel':
 
   Input signals:
     0: \rst
-    1: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:156$94_Y
-    2: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:140$92_Y
-    3: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$86_Y
-    4: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$79_Y
+    1: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:132$94_Y
+    2: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:119$92_Y
+    3: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:98$86_Y
+    4: $flatten\core.$logic_and$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$79_Y
 
   Output signals:
     0: $flatten\core.$procmux$1755_CMP
     1: $flatten\core.$procmux$1754_CMP
-    2: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:63$57_Y
-    3: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:62$54_Y
+    2: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:51$57_Y
+    3: $flatten\core.$eq$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:50$54_Y
 
   State encoding:
     0:     4'---1  <RESET STATE>
@@ -1342,30 +1342,30 @@ Optimizing module dot_product_parallel.
 5.13.23. Finished OPT passes. (There is nothing left to do.)
 
 5.14. Executing WREDUCE pass (reducing word size of cells).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$101 (core.a_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$107 (core.a_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$113 (core.a_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$95 (core.a_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:73$104 (core.b_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:73$110 (core.b_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:73$116 (core.b_buffer).
-Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:73$98 (core.b_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$101 (core.a_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$107 (core.a_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$113 (core.a_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$95 (core.a_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:59$104 (core.b_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:59$110 (core.b_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:59$116 (core.b_buffer).
+Removed top 28 address bits (of 32) from memory read port dot_product_parallel.$flatten\core.$memrd$\b_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:59$98 (core.b_buffer).
 Removed top 1 bits (of 2) from port B of cell dot_product_parallel.$auto$opt_dff.cc:195:make_patterns_logic$2089 ($ne).
-Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115 ($add).
-Removed top 30 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115 ($add).
-Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115 ($add).
-Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109 ($add).
-Removed top 30 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109 ($add).
-Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109 ($add).
-Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103 ($add).
-Removed top 31 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103 ($add).
-Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103 ($add).
-Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$91 ($add).
-Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$90 ($add).
-Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$89 ($add).
-Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$88 ($add).
-Removed top 28 bits (of 32) from wire dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103_Y.
-Removed top 28 bits (of 32) from wire dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109_Y.
+Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115 ($add).
+Removed top 30 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115 ($add).
+Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115 ($add).
+Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109 ($add).
+Removed top 30 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109 ($add).
+Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109 ($add).
+Removed top 28 bits (of 32) from port A of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103 ($add).
+Removed top 31 bits (of 32) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103 ($add).
+Removed top 28 bits (of 32) from port Y of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103 ($add).
+Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$91 ($add).
+Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$90 ($add).
+Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$89 ($add).
+Removed top 4 bits (of 20) from port B of cell dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$88 ($add).
+Removed top 28 bits (of 32) from wire dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103_Y.
+Removed top 28 bits (of 32) from wire dot_product_parallel.$flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109_Y.
 
 5.15. Executing PEEPOPT pass (run peephole optimizers).
 
@@ -1396,14 +1396,14 @@ Checking read port address `\core.b_buffer'[3] in module `\dot_product_parallel'
 
 5.19. Executing TECHMAP pass (map to technology primitives).
 
-5.19.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/mul2dsp.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/mul2dsp.v' to AST representation.
+5.19.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/mul2dsp.v' to AST representation.
 Generating RTLIL representation for module `\_80_mul'.
 Generating RTLIL representation for module `\_90_soft_mul'.
 Successfully finished Verilog frontend.
 
-5.19.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/xc7_dsp_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/xc7_dsp_map.v' to AST representation.
+5.19.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/xc7_dsp_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/xc7_dsp_map.v' to AST representation.
 Generating RTLIL representation for module `\$__MUL25X18'.
 Successfully finished Verilog frontend.
 
@@ -1418,17 +1418,17 @@ No more expansions possible.
 5.21. Executing WREDUCE pass (reducing word size of cells).
 
 5.22. Executing XILINX_DSP pass (pack resources into DSPs).
-Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:74$120 for Xilinx DSP packing.
-  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$88 ($add)
+Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:60$120 for Xilinx DSP packing.
+  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$88 ($add)
 
-Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:74$122 for Xilinx DSP packing.
-  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$90 ($add)
+Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:60$122 for Xilinx DSP packing.
+  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$90 ($add)
 
-Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:74$123 for Xilinx DSP packing.
-  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$91 ($add)
+Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:60$123 for Xilinx DSP packing.
+  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$91 ($add)
 
-Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:74$121 for Xilinx DSP packing.
-  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:137$89 ($add)
+Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:60$121 for Xilinx DSP packing.
+  postadder $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:116$89 ($add)
 
   clock: \clk (posedge) ffC:$auto$ff.cc:266:slice$2113
   clock: \clk (posedge) ffC:$auto$ff.cc:266:slice$2093
@@ -1438,13 +1438,13 @@ Analysing dot_product_parallel.$flatten\core.$mul$/workspace/scratch/2c9b6aff60b
 
 5.23. Executing TECHMAP pass (map to technology primitives).
 
-5.23.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/cmp2lut.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+5.23.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
 Generating RTLIL representation for module `\_90_lut_cmp_'.
 Successfully finished Verilog frontend.
 
-5.23.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/cmp2lcu.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/cmp2lcu.v' to AST representation.
+5.23.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/cmp2lcu.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/cmp2lcu.v' to AST representation.
 Generating RTLIL representation for module `\_80_lcu_cmp_'.
 Generating RTLIL representation for module `\$__CMP2LCU'.
 Successfully finished Verilog frontend.
@@ -1455,27 +1455,27 @@ No more expansions possible.
 
 5.24. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module dot_product_parallel:
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:128$87 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:143$93 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$124 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$125 ($add).
-  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$126 ($add).
-  merging $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$125 into $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$124.
-  merging $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$126 into $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$124.
-  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115.
-  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109.
-  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103.
-  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:143$93.
-  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:128$87.
-  creating $macc cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:95$124: $auto$alumacc.cc:365:replace_macc$2180
-  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:128$87: $auto$alumacc.cc:485:replace_alu$2181
-  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:143$93: $auto$alumacc.cc:485:replace_alu$2184
-  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$103: $auto$alumacc.cc:485:replace_alu$2187
-  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$109: $auto$alumacc.cc:485:replace_alu$2190
-  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:72$115: $auto$alumacc.cc:485:replace_alu$2193
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:107$87 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:122$93 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$124 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$125 ($add).
+  creating $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$126 ($add).
+  merging $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$125 into $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$124.
+  merging $macc model for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$126 into $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$124.
+  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115.
+  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109.
+  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103.
+  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:122$93.
+  creating $alu model for $macc $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:107$87.
+  creating $macc cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:76$124: $auto$alumacc.cc:365:replace_macc$2180
+  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:107$87: $auto$alumacc.cc:485:replace_alu$2181
+  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:122$93: $auto$alumacc.cc:485:replace_alu$2184
+  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$103: $auto$alumacc.cc:485:replace_alu$2187
+  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$109: $auto$alumacc.cc:485:replace_alu$2190
+  creating $alu cell for $flatten\core.$add$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:58$115: $auto$alumacc.cc:485:replace_alu$2193
   created 5 $alu and 1 $macc cells.
 
 5.25. Executing SHARE pass (SAT-based resource sharing).
@@ -1599,8 +1599,8 @@ Extracted addr FF from read port 0 of dot_product_parallel.core.b_buffer: $\core
 
 5.30. Executing TECHMAP pass (map to technology primitives).
 
-5.30.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/lutrams_xc5v_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/lutrams_xc5v_map.v' to AST representation.
+5.30.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/lutrams_xc5v_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/lutrams_xc5v_map.v' to AST representation.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_SP_'.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_DP_'.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_QP_'.
@@ -1617,8 +1617,8 @@ No more expansions possible.
 
 5.31. Executing TECHMAP pass (map to technology primitives).
 
-5.31.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/brams_xc6v_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/brams_xc6v_map.v' to AST representation.
+5.31.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/brams_xc6v_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/brams_xc6v_map.v' to AST representation.
 Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_TDP_'.
 Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_SDP_'.
 Successfully finished Verilog frontend.
@@ -1688,19 +1688,19 @@ Removed 0 multiplexer ports.
       New ports: A=\core.group_index, B=$flatten\core.$procmux$1890_Y, Y=$auto$rtlil.cc:2498:Mux$2152 [3:2]
       New connections: $auto$rtlil.cc:2498:Mux$2152 [1:0] = 2'00
     Consolidated identical input bits for $mux cell $flatten\core.$procmux$1723:
-      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82
-      New ports: A=1'0, B=1'1, Y=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0]
-      New connections: $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [7:1] = { $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0] }
+      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82
+      New ports: A=1'0, B=1'1, Y=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0]
+      New connections: $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [7:1] = { $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] $flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0] }
   Optimizing cells in module \dot_product_parallel.
     Consolidated identical input bits for $mux cell $flatten\core.$procmux$1752:
-      Old ports: A=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82, B=8'00000000, Y=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75
-      New ports: A=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$82 [0], B=1'0, Y=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0]
-      New connections: $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [7:1] = { $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0] }
+      Old ports: A=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82, B=8'00000000, Y=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75
+      New ports: A=$flatten\core.$3$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$82 [0], B=1'0, Y=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0]
+      New connections: $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [7:1] = { $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] $flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0] }
   Optimizing cells in module \dot_product_parallel.
     Consolidated identical input bits for $mux cell $flatten\core.$procmux$1812:
-      Old ports: A=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75, B=8'00000000, Y=$flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63
-      New ports: A=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$75 [0], B=1'0, Y=$flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0]
-      New connections: $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [7:1] = { $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:117$52_EN[7:0]$63 [0] }
+      Old ports: A=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75, B=8'00000000, Y=$flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63
+      New ports: A=$flatten\core.$2$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$75 [0], B=1'0, Y=$flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0]
+      New connections: $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [7:1] = { $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] $flatten\core.$0$memwr$\a_buffer$/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/rtl/dot_product_core.v:96$52_EN[7:0]$63 [0] }
   Optimizing cells in module \dot_product_parallel.
 Performed a total of 4 changes.
 
@@ -1785,8 +1785,8 @@ Optimizing module dot_product_parallel.
 
 5.36. Executing TECHMAP pass (map to technology primitives).
 
-5.36.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/techmap.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/techmap.v' to AST representation.
+5.36.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -1813,8 +1813,8 @@ Generating RTLIL representation for module `\_90_demux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
 
-5.36.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/arith_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/arith_map.v' to AST representation.
+5.36.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/arith_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/arith_map.v' to AST representation.
 Generating RTLIL representation for module `\_80_xilinx_lcu'.
 Generating RTLIL representation for module `\_80_xilinx_alu'.
 Successfully finished Verilog frontend.
@@ -1871,8 +1871,8 @@ Removed 26 unused cells and 124 unused wires.
 
 5.38. Executing TECHMAP pass (map to technology primitives).
 
-5.38.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/techmap.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/techmap.v' to AST representation.
+5.38.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -1899,8 +1899,8 @@ Generating RTLIL representation for module `\_90_demux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
 
-5.38.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_map.v' to AST representation.
+5.38.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_map.v' to AST representation.
 Generating RTLIL representation for module `\$__SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_MUXF78'.
@@ -1950,8 +1950,8 @@ Removed 0 unused cells and 217 unused wires.
 
 5.42. Executing TECHMAP pass (map to technology primitives).
 
-5.42.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/ff_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/ff_map.v' to AST representation.
+5.42.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/ff_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/ff_map.v' to AST representation.
 Generating RTLIL representation for module `\$_DFFE_NP0P_'.
 Generating RTLIL representation for module `\$_DFFE_PP0P_'.
 Generating RTLIL representation for module `\$_DFFE_NP1P_'.
@@ -1979,13 +1979,13 @@ No more expansions possible.
 
 5.44. Executing TECHMAP pass (map to technology primitives).
 
-5.44.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/lut_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/lut_map.v' to AST representation.
+5.44.1. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/lut_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/lut_map.v' to AST representation.
 Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
-5.44.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_map.v
-Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/.tools/root/usr/bin/../share/yosys/xilinx/cells_map.v' to AST representation.
+5.44.2. Executing Verilog-2005 frontend: /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_map.v
+Parsing Verilog input from `/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/bin/../share/yosys/xilinx/cells_map.v' to AST representation.
 Generating RTLIL representation for module `\$__SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_MUXF78'.
@@ -2139,6 +2139,6 @@ Found and reported 0 problems.
 Dumping module `\dot_product_parallel'.
 
 Warnings: 2 unique messages, 3 total
-End of script. Logfile hash: 39cd86a174, CPU: user 3.73s system 0.04s, MEM: 145.90 MB peak
+End of script. Logfile hash: 42f934f2e3, CPU: user 20.03s system 1.81s, MEM: 150.95 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 46% 21x read_verilog (1 sec), 13% 20x opt_clean (0 sec), ...
+Time spent: 77% 21x read_verilog (16 sec), 7% 1x synth_xilinx (1 sec), ...

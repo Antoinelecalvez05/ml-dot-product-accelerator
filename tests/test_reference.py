@@ -1,5 +1,3 @@
-"""Arithmetic boundary checks for the independent model (standard library)."""
-
 import unittest
 
 from model.reference import decode_signed, dot_product, encode_signed, required_accumulator_width
@@ -12,7 +10,7 @@ class ReferenceTests(unittest.TestCase):
     def test_positive_extreme_needs_twenty_bits(self):
         self.assertEqual(dot_product([-128] * 16, [-128] * 16), 262144)
         self.assertEqual(required_accumulator_width(8, 16), 20)
-        self.assertGreater(262144, (1 << 18) - 1)  # 19-bit signed maximum.
+        self.assertGreater(262144, (1 << 18) - 1)
 
     def test_negative_extreme(self):
         self.assertEqual(dot_product([-128] * 16, [127] * 16), -260096)

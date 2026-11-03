@@ -20,8 +20,6 @@ import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-# cocotb's runner exports sys.path to its embedded interpreter. Add these here
-# rather than relying on PYTHONPATH, which the runner intentionally replaces.
 for import_path in (ROOT, ROOT / "tests"):
     if str(import_path) not in sys.path:
         sys.path.insert(0, str(import_path))
@@ -52,7 +50,6 @@ def xml_results(path):
 
 
 def preserve_logs(config_name, group):
-    """Retain portable log/XML evidence even when disposable build files go."""
     destination = ROOT / "reports" / group / config_name
     destination.mkdir(parents=True, exist_ok=True)
     copied = {}
@@ -68,14 +65,13 @@ def preserve_logs(config_name, group):
 
 
 def run_configuration(config, args, *, sources_override=None, parameters_override=None, extra_build_args=()):
-    """Run one design; optional sources/parameters also support mapped netlists."""
     from cocotb_tools.runner import get_runner
 
     work = ROOT / "build" / "sim" / config["name"]
     fragments = work / "reports"
     fragments.mkdir(parents=True, exist_ok=True)
     for path in fragments.glob("*.json"):
-        path.unlink()  # Never mistake a previous passing run for this run's result.
+        path.unlink()
     xml = work / "results.xml"
     if xml.exists():
         xml.unlink()
@@ -159,8 +155,6 @@ def main():
 
     (ROOT / "build").mkdir(exist_ok=True)
     (ROOT / "reports").mkdir(exist_ok=True)
-    # Evidence always belongs to the current invocation. A failed or partial run
-    # must not leave a previous successful benchmark looking current.
     (ROOT / "reports" / "benchmark.json").unlink(missing_ok=True)
     (ROOT / "reports" / "verification.json").write_text(json.dumps({
         "status": "running", "seed": args.seed, "quick": args.quick,

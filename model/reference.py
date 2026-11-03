@@ -10,14 +10,12 @@ import json
 
 
 def required_accumulator_width(data_width, vector_len):
-    """The conservative full-product width plus ceil(log2(vector length))."""
     if data_width < 2 or vector_len < 1:
         raise ValueError("data_width must be >= 2 and vector_len must be >= 1")
     return 2 * data_width + (vector_len - 1).bit_length()
 
 
 def dot_product(a, b, data_width=8):
-    """Return sum(a[i] * b[i]); reject inputs outside the signed interface."""
     if data_width < 2:
         raise ValueError("data_width must be >= 2")
     if len(a) != len(b) or not a:
@@ -30,14 +28,12 @@ def dot_product(a, b, data_width=8):
 
 
 def encode_signed(value, width):
-    """Two's-complement wire encoding; callers supply an in-range integer."""
     if not -(1 << (width - 1)) <= value < (1 << (width - 1)):
         raise ValueError(f"{value} does not fit in {width} signed bits")
     return value & ((1 << width) - 1)
 
 
 def decode_signed(bits, width):
-    """Interpret an unsigned wire value as a two's-complement integer."""
     if not 0 <= bits < (1 << width):
         raise ValueError(f"{bits} does not fit in {width} unsigned bits")
     return bits - (1 << width) if bits & (1 << (width - 1)) else bits

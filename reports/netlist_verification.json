@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "generated_utc": "2026-10-29T22:40:38.520828+00:00",
+  "generated_utc": "2026-11-03T13:22:50.820173+00:00",
   "scope": "Functional simulation of mapped Xilinx primitive netlists; no SDF or timing proof.",
   "seed": 20261029,
   "tools": {
@@ -9,17 +9,17 @@
     "iverilog": "Icarus Verilog version 12.0 (stable) ()",
     "yosys": "Yosys 0.33 (git sha1 2584903a060)"
   },
-  "synthesis_summary_sha256": "b6d734a1c013cebdb0b34b818d1115926df1eab0f9d8747e36e5981c471dabcb",
+  "synthesis_summary_sha256": "9aae8f846e1863e560b81b048483efcea558ff0faecfe7fc272364c6a9fa4b75",
   "rtl_sha256": {
-    "rtl/dot_product_core.v": "5c000170036c0889016292f494339ace12b83f6523250feff9cc8c0083191f95",
-    "rtl/dot_product_serial.v": "dc8d5d973aef74d6c7fed6a86e8484ad57da32ed679fc56313720ce1d2f78533",
-    "rtl/dot_product_parallel.v": "32a603351fd67c08aef5d914dc08d89b6d681dd0731b3a59223a45968ffc7cee"
+    "rtl/dot_product_core.v": "94474cd54973db579cedc3ac66f0f6a9434289b59156b32763965787b3ac21bc",
+    "rtl/dot_product_serial.v": "b3c5309fd120bfe32dd51a38240a1e5b0644c37cd57e85d2a0e860f35c35650f",
+    "rtl/dot_product_parallel.v": "7b9515109aaa0affd2cf4d1fcb9cc2a04d6d936c345bb165609c98ff8d0bf52d"
   },
   "verification_source_sha256": {
-    "scripts/run_tests.py": "179bc8e21c7b23e1274dc1fa88c0b1fe4dba43448c04982786a3e36783eb9e10",
-    "scripts/verify_netlists.py": "ee4d2f24065f652e6c96e09e12531cdc6815e5d17d0173399f2d5d26d1a30bd5",
-    "tests/cocotb_dot_product.py": "665d35aeed119b665482d6f5ba6c107b972db906ffd8d921c3ddb3a6fb60a5a5",
-    "model/reference.py": "e914cac15c21bce44bc7dcf50a0384e48558bfb3516d767c68d051ab1d4f175f"
+    "scripts/run_tests.py": "97f740b0b0170159592ef9565e8a00a402c78eecb805d1574766b40b6fae2169",
+    "scripts/verify_netlists.py": "6b22406a7200540015cbda2b9b4f14f456548c5eb3b47fa8162d8bdfd4624b97",
+    "tests/cocotb_dot_product.py": "27966ca5f0ad9d940eea9299a8486b34373f818859f1af95931e2e2ee23d124a",
+    "model/reference.py": "5036c46a928a9c1b4bd1566b4672bdfc4db4325bd55a8c4437813f73497fdee1"
   },
   "simulation_tests": 16,
   "checked_outputs": 248,
@@ -379,7 +379,7 @@
         "sha256": "686ab1d01b895e69350e6908e1760486ba67aea264a6e1a641a82796ce4ed9ca"
       },
       "simulation_library": {
-        "path": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/share/yosys/xilinx/cells_sim.v",
+        "path": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/share/yosys/xilinx/cells_sim.v",
         "sha256": "10f8afc61bf708949ebf238294327dce95eaa68919bb0ab5938d40f24e39d15e"
       },
       "logs": {
@@ -743,7 +743,7 @@
         "sha256": "bf621500531fd79b894113ec03a9369a25cb4ebf0c2a4069a4e5c769e64d89b7"
       },
       "simulation_library": {
-        "path": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/share/yosys/xilinx/cells_sim.v",
+        "path": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/share/yosys/xilinx/cells_sim.v",
         "sha256": "10f8afc61bf708949ebf238294327dce95eaa68919bb0ab5938d40f24e39d15e"
       },
       "logs": {
@@ -1107,7 +1107,7 @@
         "sha256": "f4a130827710baafef7740391f1e4b381958f278b4bc4b20079317e11d15c3bf"
       },
       "simulation_library": {
-        "path": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/share/yosys/xilinx/cells_sim.v",
+        "path": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/share/yosys/xilinx/cells_sim.v",
         "sha256": "10f8afc61bf708949ebf238294327dce95eaa68919bb0ab5938d40f24e39d15e"
       },
       "logs": {
@@ -1471,7 +1471,7 @@
         "sha256": "4e84ff03f9462e5f644f5373eaa9aabfff14282bd34085369eaf2b8b0a45a130"
       },
       "simulation_library": {
-        "path": "/workspace/scratch/2c9b6aff60bc/.tools/root/usr/share/yosys/xilinx/cells_sim.v",
+        "path": "/workspace/scratch/2c9b6aff60bc/cleanup-toolchain/root/usr/share/yosys/xilinx/cells_sim.v",
         "sha256": "10f8afc61bf708949ebf238294327dce95eaa68919bb0ab5938d40f24e39d15e"
       },
       "logs": {

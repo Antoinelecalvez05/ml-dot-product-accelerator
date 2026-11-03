@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Compile and run the board-wrapper smoke test with Icarus Verilog."""
 from pathlib import Path
 import shutil
 import subprocess

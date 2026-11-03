@@ -18,7 +18,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def yosys_quote(path: Path) -> str:
-    """Quote an absolute filename for a Yosys command file, not for a shell."""
     return '"' + str(path).replace('\\', '\\\\').replace('"', '\\"') + '"'
 
 
@@ -45,9 +44,6 @@ def main() -> None:
     provenance = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                   for p in sources}
     script_hash = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-    # Invalidate only generated summaries before beginning a new measurement.
-    # A failure or interruption must not leave an older passing table looking
-    # like the result of this invocation; raw logs remain available for review.
     pending = {"status": "running", "yosys_version": version, "rtl_sha256": provenance,
                "synthesis_script_sha256": script_hash,
                "generated_utc": datetime.now(timezone.utc).isoformat()}
@@ -77,8 +73,6 @@ def main() -> None:
                 f"synth_xilinx -top {top} -family xc7 -flatten -noiopad -noclkbuf"
                 + (" -nodsp" if mode == "lut" else ""),
                 "check -assert",
-                # Older Yosys tee does not unquote filenames; run in the
-                # report directory and use this controlled, simple basename.
                 f"tee -o {stats.name} stat -json -tech xilinx",
                 f"write_json {yosys_quote(netlist)}",
                 f"write_verilog -noattr {yosys_quote(verilog)}",
@@ -96,8 +90,6 @@ def main() -> None:
             sim_match = re.search(r"Parsing Verilog input from [`']([^`']*/xilinx/cells_sim\.v)", log.read_text())
             sim_library = str(args.sim_lib.resolve()) if args.sim_lib else (sim_match.group(1) if sim_match else None)
             counts = Counter(cell["type"] for cell in mapped["modules"][top]["cells"].values())
-            # The design was flattened: these are physical primitive instances
-            # in this core, not sums that double-count nested module statistics.
             unknown = {kind: count for kind, count in counts.items() if kind.startswith("$")}
             if unknown:
                 fail(f"Unmapped internal cells in {tag}: {unknown}")

@@ -1,11 +1,3 @@
-"""Cycle-driven, self-checking RTL tests with an independent Python scoreboard.
-
-The monitor sees every clock edge, including idle and reset cycles. Drivers
-cannot silently skip an unexpected result. Inputs change only while clk is low;
-handshakes are sampled just before its rising edge and outputs after settling.
-The deliberate half-cycle waits avoid simulator delta-cycle ordering races.
-"""
-
 from collections import deque
 import json
 import os
@@ -27,7 +19,6 @@ REPORT_DIR = Path(os.environ["DP_REPORT_DIR"])
 
 
 class Bench:
-    """Driver plus an always-invoked interface monitor, with no RTL state access."""
 
     def __init__(self, dut):
         self.dut = dut
@@ -59,12 +50,10 @@ class Bench:
         }
 
     async def tick(self, *, valid=0, a=0, b=0, ready=1, reset=0):
-        """Perform exactly one rising clock edge and monitor all transfers."""
         self.dut.clk.value = 0
         self.dut.rst.value = reset
         self.dut.in_valid.value = valid
         self.dut.out_ready.value = ready
-        # Poison invalid input data to expose an implementation that forgets valid.
         self.dut.in_a.value = encode_signed(a, W) if valid else (self.edge * 31 + 7) % (1 << W)
         self.dut.in_b.value = encode_signed(b, W) if valid else (self.edge * 17 + 3) % (1 << W)
         await Timer(5, unit="ns")
@@ -236,7 +225,7 @@ async def arithmetic_and_random_protocol(dut):
     for label, a, b in vectors:
         pauses = [0] * N
         if label == "mixed_extrema":
-            pauses[N // 2] = 37  # Long partial-frame pause: no premature result.
+            pauses[N // 2] = 37
         record = await bench.send_vector(a, b, pauses=pauses)
         await bench.retire(stall_cycles=37 if label == "all_max" else 2)
         directed_results.append({"case": label, "expected": record["expected"]})
@@ -266,7 +255,6 @@ async def continuous_valid_back_to_back(dut):
     for cycle in range(frames * (N + N // LANES + 30) + 100):
         valid = next_pair < len(pairs)
         a, b = pairs[next_pair] if valid else (0, 0)
-        # Source keeps valid/data held throughout all receiver stalls.
         ready = (cycle % 13) not in (4, 5, 6, 7, 8)
         event = await bench.tick(valid=valid, a=a, b=b, ready=ready)
         if event["input_fire"]:
@@ -291,7 +279,6 @@ async def reset_abort_and_recovery(dut):
     scenarios = []
 
     async def recover(label):
-        # A completely new frame must work, and abandoned data must never leak.
         await bench.send_vector(a, b)
         await bench.retire()
         await bench.quiesce()
@@ -303,14 +290,11 @@ async def reset_abort_and_recovery(dut):
         await bench.tick(reset=1, ready=1, valid=1, a=poison_a, b=poison_b)
         await recover("reset_during_partial_load")
 
-    # Reset has priority on the edge that would have accepted the last input.
     for _ in range(N - 1):
         await bench.send_pair(poison_a, poison_b)
     await bench.tick(reset=1, valid=1, a=poison_a, b=poison_b, ready=1)
     await recover("reset_on_final_input_edge")
 
-    # Abort with work still outstanding. For one compute cycle this tests the
-    # boundary before that cycle; larger configurations test its middle.
     await bench.send_vector([poison_a] * N, [poison_b] * N)
     for _ in range((N // LANES) // 2):
         await bench.tick(ready=0)
@@ -381,7 +365,7 @@ async def measured_cycle_benchmarks(dut):
         intervals = [right["first_input_edge"] - left["first_input_edge"]
                      for left, right in zip(results, results[1:])]
         assert len(set(intervals)) == 1, "Unexpected inter-frame timing jitter"
-        expected_compute = N // LANES + 1  # MAC iterations plus registered reduction.
+        expected_compute = N // LANES + 1
         for record in results:
             assert record["compute_to_valid_cycles"] == expected_compute
             assert record["load_cycles_inclusive"] == N + sum(pauses)

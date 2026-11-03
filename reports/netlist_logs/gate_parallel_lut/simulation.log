@@ -1,8 +1,8 @@
-     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/.venv/bin/python
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/venv/bin/python
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
      0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
      0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 20261029
-     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/.venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/scratch/2c9b6aff60bc/cleanup-toolchain/venv/lib/python3.12/site-packages/cocotb
      0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
      0.00ns INFO     cocotb                             Running tests
      0.00ns INFO     cocotb.regression                  running cocotb_dot_product.arithmetic_and_random_protocol (1/4)
@@ -16,10 +16,10 @@
  21350.00ns INFO     cocotb.regression                  ***********************************************************************************************************
                                                         ** TEST                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         ***********************************************************************************************************
-                                                        ** cocotb_dot_product.arithmetic_and_random_protocol   PASS       10330.00           0.71      14599.93  **
-                                                        ** cocotb_dot_product.continuous_valid_back_to_back    PASS        3320.00           0.58       5750.31  **
-                                                        ** cocotb_dot_product.reset_abort_and_recovery         PASS        4870.00           0.25      19280.72  **
-                                                        ** cocotb_dot_product.measured_cycle_benchmarks        PASS        2830.00           0.24      11594.33  **
+                                                        ** cocotb_dot_product.arithmetic_and_random_protocol   PASS       10330.00           7.43       1390.18  **
+                                                        ** cocotb_dot_product.continuous_valid_back_to_back    PASS        3320.00           1.18       2813.12  **
+                                                        ** cocotb_dot_product.reset_abort_and_recovery         PASS        4870.00           0.51       9552.47  **
+                                                        ** cocotb_dot_product.measured_cycle_benchmarks        PASS        2830.00           0.48       5956.18  **
                                                         ***********************************************************************************************************
-                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                   21350.00           1.78      11963.04  **
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                   21350.00           9.60       2223.55  **
                                                         ***********************************************************************************************************

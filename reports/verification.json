@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "generated_utc": "2026-10-29T22:37:48.430511+00:00",
+  "generated_utc": "2026-11-03T13:21:07.709370+00:00",
   "seed": 20261029,
   "quick": false,
   "tools": {
@@ -12,14 +12,14 @@
   "simulation_tests": 40,
   "checked_outputs": 1732,
   "source_sha256": {
-    "rtl/dot_product_core.v": "5c000170036c0889016292f494339ace12b83f6523250feff9cc8c0083191f95",
-    "rtl/dot_product_parallel.v": "32a603351fd67c08aef5d914dc08d89b6d681dd0731b3a59223a45968ffc7cee",
-    "rtl/dot_product_serial.v": "dc8d5d973aef74d6c7fed6a86e8484ad57da32ed679fc56313720ce1d2f78533",
-    "scripts/run_tests.py": "179bc8e21c7b23e1274dc1fa88c0b1fe4dba43448c04982786a3e36783eb9e10",
-    "tests/cocotb_dot_product.py": "665d35aeed119b665482d6f5ba6c107b972db906ffd8d921c3ddb3a6fb60a5a5",
-    "tests/test_reference.py": "a69474321a58c3b0a37ec50793306a9719b7450b9f43d60e801adf8488d2567d",
-    "model/reference.py": "e914cac15c21bce44bc7dcf50a0384e48558bfb3516d767c68d051ab1d4f175f",
-    "requirements.txt": "b700a034c341ad8b29fae7df012c881161e1dc2e221111d4d0e79295e6780a7b"
+    "rtl/dot_product_core.v": "94474cd54973db579cedc3ac66f0f6a9434289b59156b32763965787b3ac21bc",
+    "rtl/dot_product_parallel.v": "7b9515109aaa0affd2cf4d1fcb9cc2a04d6d936c345bb165609c98ff8d0bf52d",
+    "rtl/dot_product_serial.v": "b3c5309fd120bfe32dd51a38240a1e5b0644c37cd57e85d2a0e860f35c35650f",
+    "scripts/run_tests.py": "97f740b0b0170159592ef9565e8a00a402c78eecb805d1574766b40b6fae2169",
+    "tests/cocotb_dot_product.py": "27966ca5f0ad9d940eea9299a8486b34373f818859f1af95931e2e2ee23d124a",
+    "tests/test_reference.py": "b9343a34fdd1fa04cef9ae868d87e9f6f5407fb39f14de0716aaa71bca8c753c",
+    "model/reference.py": "5036c46a928a9c1b4bd1566b4672bdfc4db4325bd55a8c4437813f73497fdee1",
+    "requirements.txt": "9bc997c473bd44c93f41772d3a19c723a1a538dbf93f870ffb09c63c66267491"
   },
   "configurations": [
     {

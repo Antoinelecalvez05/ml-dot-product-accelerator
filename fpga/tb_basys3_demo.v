@@ -33,7 +33,6 @@ module tb_basys3_demo;
         input_count = 0;
         cycles(12);
         if (led !== 16'h0000) $fatal(1, "Power-on reset failed");
-        // A one-cycle bounce must not start a calculation.
         @(negedge clk); btnC = 1;
         @(negedge clk); btnC = 0;
         cycles(12);

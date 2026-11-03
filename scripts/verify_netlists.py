@@ -52,7 +52,7 @@ def main():
     parser.add_argument("--seed", type=lambda value: int(value, 0), default=20261029)
     parser.add_argument("--waves", action="store_true")
     args = parser.parse_args()
-    args.quick = True  # Eight random vectors plus all directed/protocol/reset tests per netlist.
+    args.quick = True
     if not args.summary.is_file():
         parser.error("No synthesis summary. Run the synthesis script before testing netlists.")
     synthesis = json.loads(args.summary.read_text())

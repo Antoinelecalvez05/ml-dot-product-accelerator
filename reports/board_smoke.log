@@ -1,2 +1,2 @@
 PASS: Basys 3 demo reset, debounce, parallel-first completion, result=272, held button, restart
-/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/fpga/tb_basys3_demo.v:61: $finish called at 2686000 (1ps)
+/workspace/scratch/2c9b6aff60bc/ml-dot-product-accelerator/fpga/tb_basys3_demo.v:60: $finish called at 2686000 (1ps)

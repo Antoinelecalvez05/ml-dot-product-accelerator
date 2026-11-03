@@ -1,2 +1,1 @@
-# Optional: only needed to regenerate the static chart with --plot.
 matplotlib>=3.8,<4

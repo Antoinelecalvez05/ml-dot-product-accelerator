@@ -1,9 +1,6 @@
 `timescale 1ns / 1ps
 `default_nettype none
 
-// Parallel architecture: four independent multiply-accumulate lanes process
-// four pairs per compute clock. With defaults, compute is 4 + 1 reduction clocks.
-// The input bandwidth remains one accepted pair per clock, exactly as in serial.
 module dot_product_parallel #(
     parameter integer VECTOR_LEN = 16,
     parameter integer DATA_WIDTH = 8,
